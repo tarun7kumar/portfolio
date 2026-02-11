@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #E84A33;
+  --color-vibrant-orange: #E84A33;
+  --color-background-light: #f8f6f6;
+  --color-background-dark: #0a0a0a;
+  --color-card-dark: #1a1a1a;
+  --color-charcoal: #121212;
+  --color-off-white: #F5F5F0;
+
+  --font-display: var(--font-jakarta), sans-serif;
+  --font-clash: var(--font-lexend), sans-serif;
+  --font-serif-accent: var(--font-cormorant), serif;
+  --font-space: var(--font-space), sans-serif;
+  --font-montserrat: var(--font-montserrat), sans-serif;
+  --font-poppins: var(--font-poppins), sans-serif;
+  --font-inter: var(--font-inter), sans-serif;
+  --font-dm-sans: var(--font-dm-sans), sans-serif;
+}
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --color-1: #ff5a3c;
+  --color-2: #ff7a59;
+  --color-3: #ffffff;
+  --color-4: #ff3d2e;
+}
+
+/* ===== BASE ===== */
+html,
+body {
+  background: transparent;
+  color: var(--foreground);
+  font-family: var(--font-display), sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+/*PREMIUM ANIMATED BACKGROUND */
+.premium-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background);
+  background-image:
+    radial-gradient(circle at 15% 50%, rgba(232, 74, 51, 0.08), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(255, 120, 0, 0.05), transparent 25%);
+  z-index: -20;
+  pointer-events: none;
+}
+
+/*  GLASSMORPHISM UTILITIES */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card {
+  background: rgba(26, 26, 26, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 80px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E84A33;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E84A33;
+}
+
+/* SELECTION */
+::selection {
+  background: rgba(232, 74, 51, 0.3);
+  color: #fff;
+}

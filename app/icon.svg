@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <style>
+    text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      fill: white;
+    }
+  </style>
+  <rect width="32" height="32" fill="none" />
+  
+  <!-- "tK" text: Moved slightly left to x=12 -->
+  <text x="12" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="20">tK</text>
+  
+  <!-- Orange Round Dot: Moved outwards to cx=27 -->
+  <circle cx="27" cy="19" r="2.5" fill="#E84A33" />
+</svg>

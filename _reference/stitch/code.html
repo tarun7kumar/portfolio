@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tarun's Portfolio - Non-Overlapping About Me</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Cormorant:ital,wght@1,600;1,700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#E84A33",
+                        "vibrant-orange": "#E84A33",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#0a0a0a",
+                        "card-dark": "#1a1a1a",
+                        "charcoal": "#121212",
+                        "off-white": "#F5F5F0",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "clash": ["Lexend", "sans-serif"],
+                        "serif-accent": ["Cormorant", "serif"],
+                        "space": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #E84A33;
+        }
+        .atmospheric-hero-bg {
+            background-color: #0a0a0a;
+            position: relative;
+            overflow: hidden;
+        }
+        .atmospheric-hero-bg::before {
+            content: "";
+            position: absolute;
+            inset: -50%;
+            background: 
+                radial-gradient(circle at 75% 30%, rgba(232, 74, 51, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 60%, rgba(255, 138, 0, 0.05) 0%, transparent 35%),
+                radial-gradient(circle at 10% 20%, rgba(18, 18, 18, 1) 0%, transparent 50%);
+            filter: blur(120px);
+            z-index: 0;
+            pointer-events: none;
+        }
+        .atmospheric-hero-bg::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 80% 40%, rgba(232, 74, 51, 0.04) 0%, transparent 60%);
+            z-index: 1;
+            pointer-events: none;
+        }
+        .custom-noise {
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.07'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 5;
+            mix-blend-mode: overlay;
+        }
+        .hero-vignette {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, transparent 20%, rgba(10, 10, 10, 0.6) 100%);
+            z-index: 2;
+            pointer-events: none;
+        }
+        .tarun-title {
+            letter-spacing: -0.04em;
+        }
+        .kumar-bold {
+            letter-spacing: -0.02em;
+        }
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        .grainy-photo {
+            filter: contrast(1.1) brightness(0.9) grayscale(1);
+            position: relative;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 antialiased selection:bg-vibrant-orange selection:text-white">
+<nav class="fixed top-0 w-full z-50 bg-white/50 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-white/5">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex-shrink-0">
+<span class="text-xl font-extrabold dark:text-white tracking-tighter">tK<span class="text-vibrant-orange">.</span></span>
+</div>
+<div class="hidden md:block">
+<div class="ml-10 flex items-center space-x-8">
+<a class="hover:text-vibrant-orange transition-colors px-3 py-2 text-sm font-medium" href="#about">About</a>
+<a class="hover:text-vibrant-orange transition-colors px-3 py-2 text-sm font-medium" href="#skills">Skills</a>
+<a class="hover:text-vibrant-orange transition-colors px-3 py-2 text-sm font-medium" href="#projects">Projects</a>
+<a class="bg-vibrant-orange text-white px-5 py-2 rounded-lg text-sm font-bold hover:brightness-110 transition-all shadow-lg shadow-vibrant-orange/20" href="#contact">Contact</a>
+</div>
+</div>
+<div class="md:hidden">
+<button class="text-gray-400 hover:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<section class="relative h-screen flex items-center atmospheric-hero-bg">
+<div class="hero-vignette"></div>
+<div class="custom-noise"></div>
+<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+<div class="max-w-7xl text-left">
+<div class="inline-flex mb-8 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl">
+<span class="text-gray-300 text-xs font-semibold tracking-wider flex items-center gap-3 uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+                    Open to work and collaborations
+                </span>
+</div>
+<h1 class="text-7xl md:text-8xl lg:text-[10rem] leading-none text-white mb-10 flex items-baseline whitespace-nowrap">
+<span class="font-clash font-normal tarun-title">Tarun</span>
+<span class="font-clash font-extrabold kumar-bold text-vibrant-orange ml-[0.2em]">Kumar.</span>
+</h1>
+<p class="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl font-light tracking-wide font-space">
+                Electronics &amp; Machine Learning Enthusiast <span class="text-white/20 mx-3">|</span> VIT
+            </p>
+<div class="flex flex-col sm:flex-row items-center gap-6">
+<a class="w-full sm:w-auto px-12 py-5 bg-vibrant-orange text-white hover:brightness-110 rounded-full font-bold transition-all transform hover:-translate-y-1 shadow-[0_20px_40px_-15px_rgba(232,74,51,0.4)] text-center" href="#projects">
+                    View Work
+                </a>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 bg-background-dark relative overflow-hidden" id="about">
+<div class="custom-noise opacity-30"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="absolute top-0 left-8 md:left-24 text-[10px] uppercase tracking-[0.4em] text-gray-500 font-space py-8 border-l border-white/10 pl-4 hidden md:block">
+            01 // BIOGRAPHY<br/>EST. 2004
+        </div>
+<div class="absolute bottom-0 right-8 md:right-24 text-[10px] uppercase tracking-[0.4em] text-gray-500 font-space py-8 border-r border-white/10 pr-4 text-right hidden md:block">
+            ELECTRONICS &amp; AI<br/>VELLORE INST. OF TECH.
+        </div>
+<div class="grid grid-cols-12 gap-8 items-start pt-16">
+<div class="col-span-12 lg:col-span-5 order-2 lg:order-1 flex flex-col justify-center">
+<div class="hidden lg:block mb-8">
+<h2 class="vertical-text text-[120px] font-clash font-extrabold text-white/5 leading-none select-none">STORY.</h2>
+</div>
+<div class="space-y-8 pr-0 lg:pr-12">
+<div class="mb-12">
+<h2 class="text-5xl md:text-6xl font-clash font-extrabold text-white leading-tight tracking-tighter">
+                            ABOUT <span class="text-vibrant-orange">ME.</span>
+</h2>
+<div class="w-20 h-1 bg-vibrant-orange mt-4"></div>
+</div>
+<div class="flex items-center gap-4 mb-4">
+<span class="text-vibrant-orange font-bold text-sm tracking-widest uppercase">The Essence</span>
+<div class="h-px flex-grow bg-white/10"></div>
+</div>
+<p class="text-off-white/90 text-2xl md:text-3xl leading-snug font-clash font-medium tracking-tight">
+                        Pioneering the intersection of <span class="text-vibrant-orange">Silicon</span> and <span class="text-vibrant-orange">Synapses</span>.
+                    </p>
+<p class="text-gray-400 text-lg leading-relaxed font-light">
+                        Pursuing a degree at <span class="text-off-white font-medium">VIT</span>, I specialize in building intelligent systems that perceive and interact with reality through hardware and ML.
+                    </p>
+<div class="grid grid-cols-2 gap-4 mt-12">
+<div class="border-t border-white/10 pt-4">
+<span class="block text-2xl font-clash font-bold text-vibrant-orange">03+</span>
+<span class="text-[10px] uppercase tracking-widest text-gray-500">Years Active</span>
+</div>
+<div class="border-t border-white/10 pt-4">
+<span class="block text-2xl font-clash font-bold text-vibrant-orange">15+</span>
+<span class="text-[10px] uppercase tracking-widest text-gray-500">Milestones</span>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-7 order-1 lg:order-2 relative flex flex-col items-end">
+<div class="relative w-full lg:w-[75%] aspect-[4/5] z-10 overflow-hidden rounded-sm grainy-photo shadow-2xl">
+<img alt="Portrait of Tarun" class="w-full h-full object-cover scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHE1DYm_XztXbnqtKhcFJkdUom7FWcocq5UYjAG1RB6gAFX4noTXG7eYTjBeUB36S9JbC1FWUANkEymCtdDmuMBE9fTFIy55YS0xO7whsNsTV2zbDNqwBiW22E5f1E-AwO5NtkslBqThZJHs0mdLUJ-849VpKF5H6aT-imBDZBKGlI7MGoEPvVtzt-ET9oLvbEulR0pK3G-95e8vXPZsszWBfnh6NLTEATF9KL7R0vuPEkm3G9V1JBlKyDTFvVrKj-r6MJMlOHnpD3"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/40 via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="absolute top-12 left-0 lg:left-[-10%] z-20 border border-white/20 p-4 backdrop-blur-sm hidden lg:block">
+<div class="w-16 h-16 flex items-center justify-center">
+<span class="material-symbols-outlined text-vibrant-orange text-4xl font-light">expand_content</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 bg-background-dark/50 border-y border-white/5" id="skills">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-20">
+<h2 class="text-4xl font-bold text-white mb-4">Technical Arsenal</h2>
+<p class="text-gray-500 text-lg">Tools and technologies in my professional stack</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+<div class="group flex flex-col items-center justify-center p-8 bg-charcoal rounded-xl border border-white/5 hover:border-vibrant-orange/40 transition-all duration-300 hover:-translate-y-2">
+<span class="material-symbols-outlined text-4xl text-gray-500 group-hover:text-vibrant-orange mb-4 transition-colors">code</span>
+<span class="text-gray-300 font-medium">Python</span>
+</div>
+<div class="group flex flex-col items-center justify-center p-8 bg-charcoal rounded-xl border border-white/5 hover:border-vibrant-orange/40 transition-all duration-300 hover:-translate-y-2">
+<span class="material-symbols-outlined text-4xl text-gray-500 group-hover:text-vibrant-orange mb-4 transition-colors">memory</span>
+<span class="text-gray-300 font-medium">Embedded C</span>
+</div>
+<div class="group flex flex-col items-center justify-center p-8 bg-charcoal rounded-xl border border-white/5 hover:border-vibrant-orange/40 transition-all duration-300 hover:-translate-y-2">
+<span class="material-symbols-outlined text-4xl text-gray-500 group-hover:text-vibrant-orange mb-4 transition-colors">psychology</span>
+<span class="text-gray-300 font-medium">TensorFlow</span>
+</div>
+<div class="group flex flex-col items-center justify-center p-8 bg-charcoal rounded-xl border border-white/5 hover:border-vibrant-orange/40 transition-all duration-300 hover:-translate-y-2">
+<span class="material-symbols-outlined text-4xl text-gray-500 group-hover:text-vibrant-orange mb-4 transition-colors">schema</span>
+<span class="text-gray-300 font-medium">PyTorch</span>
+</div>
+<div class="group flex flex-col items-center justify-center p-8 bg-charcoal rounded-xl border border-white/5 hover:border-vibrant-orange/40 transition-all duration-300 hover:-translate-y-2">
+<span class="material-symbols-outlined text-4xl text-gray-500 group-hover:text-vibrant-orange mb-4 transition-colors">developer_board</span>
+<span class="text-gray-300 font-medium">Arduino</span>
+</div>
+<div class="group flex flex-col items-center justify-center p-8 bg-charcoal rounded-xl border border-white/5 hover:border-vibrant-orange/40 transition-all duration-300 hover:-translate-y-2">
+<span class="material-symbols-outlined text-4xl text-gray-500 group-hover:text-vibrant-orange mb-4 transition-colors">wifi_tethering</span>
+<span class="text-gray-300 font-medium">IoT</span>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 bg-background-dark" id="projects">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="mb-16 flex justify-between items-end">
+<div>
+<h2 class="text-4xl font-bold text-white mb-4">Featured Projects</h2>
+<p class="text-gray-500 text-lg">A selection of my recent work in ML and Electronics</p>
+</div>
+<a class="hidden sm:flex items-center text-vibrant-orange hover:text-white transition-colors text-sm font-bold uppercase tracking-widest" href="#">
+                View All <span class="material-symbols-outlined text-sm ml-2">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-[350px]">
+<div class="md:col-span-2 row-span-1 group relative bg-charcoal rounded-2xl overflow-hidden border border-white/5 hover:border-vibrant-orange/30 transition-all duration-500">
+<img alt="Smart Home Hub" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-20 group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCGWdYktVf7n50yAd2729Icoo4I3SIJ8bMyNwMsQ0KGMBpNSyydvJmbPUkDGZDTQ5K5c7qvANlAvdhl0o_ehulHoftPu3wTbIqJFbXuH2qLAenQRt3O3t3sPhqip8lg9zt2vGjbPm1ZbgWZNtDDi1LpqoO7zIwVDjKFw7gn8oeUHCpFQ88Amo3Y1NS_dPa2wbulb71T6_6Cs0NJBYjrgG-7d2YiWn6asGsL7ga5khvR9zdyJ7OhTeo3ROl65zQG55xsTns0mhBo5Cm"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/60 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10 w-full">
+<div class="flex gap-3 mb-4">
+<span class="px-3 py-1 text-xs font-bold uppercase tracking-wider bg-vibrant-orange/10 text-vibrant-orange border border-vibrant-orange/20 rounded">IoT</span>
+<span class="px-3 py-1 text-xs font-bold uppercase tracking-wider bg-white/5 text-gray-400 rounded">ESP32</span>
+</div>
+<h3 class="text-3xl font-bold text-white mb-3">Smart Home Automation Hub</h3>
+<p class="text-gray-400 line-clamp-2 max-w-xl text-lg font-light">A centralized IoT controller using ESP32 that manages home appliances via voice commands and a custom mobile app dashboard.</p>
+</div>
+</div>
+<div class="md:col-span-1 md:row-span-2 group relative bg-charcoal rounded-2xl overflow-hidden border border-white/5 hover:border-vibrant-orange/30 transition-all duration-500">
+<img alt="Autonomous Rover" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-20 group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb46-0tYmMMj8T2tCpAtQJpozizeTl-RLErDVvggp8h-d-7p64soVVSszumNBKIDor1-tNpjt7YlJ7Vq3Q7J7dvqQEQzX2x2H_VuADtLa5JjTnVLO4SN2qr8Ix-SKRDYxDrMtqaQYUVbsDD4hzsTm7xcku-lh7s8qYFQ-qH4dqLdYzd5MnDFHhqdAGKiPMZQURA91NcAwpYz9h0zsRmTVd1hyYU5pPavTt4h-dsb1YuVQrFhY85k9psboZW7J_LkB6syz3m60lEZIF"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10 w-full">
+<div class="flex flex-wrap gap-3 mb-4">
+<span class="px-3 py-1 text-xs font-bold uppercase tracking-wider bg-vibrant-orange/10 text-vibrant-orange border border-vibrant-orange/20 rounded">Robotics</span>
+<span class="px-3 py-1 text-xs font-bold uppercase tracking-wider bg-white/5 text-gray-400 rounded">C++</span>
+</div>
+<h3 class="text-3xl font-bold text-white mb-4">Autonomous Rover</h3>
+<p class="text-gray-400 mb-6 text-lg font-light leading-relaxed">Obstacle avoidance and pathfinding robot built from scratch using custom PCB and sensor fusion algorithms.</p>
+<a class="inline-flex items-center text-vibrant-orange text-sm font-bold uppercase tracking-widest hover:text-white transition-colors" href="#">
+                        Case Study <span class="material-symbols-outlined text-sm ml-2">arrow_outward</span>
+</a>
+</div>
+</div>
+<div class="md:col-span-1 row-span-1 group relative bg-charcoal rounded-2xl overflow-hidden border border-white/5 hover:border-vibrant-orange/30 transition-all duration-500">
+<div class="absolute inset-0 bg-gradient-to-br from-gray-900 to-black"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full z-10">
+<div class="flex gap-3 mb-4">
+<span class="px-3 py-1 text-xs font-bold uppercase tracking-wider bg-vibrant-orange/10 text-vibrant-orange border border-vibrant-orange/20 rounded">ML</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-2">Image Classifier</h3>
+<p class="text-gray-500 text-base font-light">CNN architecture for detecting plant diseases from leaf images.</p>
+</div>
+<img alt="Neural Network" class="absolute top-0 right-0 w-40 h-40 object-contain opacity-20 transform translate-x-10 -translate-y-10 group-hover:rotate-12 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2PUQ8tqhHLD_Up9KI2jGKwNMg2X0blXQWcBcQvWW-R1Z8dx2mvmoHaWL7DatpBDGq2XCDsHii3y1jla6DRNwJe_1IEXNuOX_O16hoCHgqmo1SmoRW7vVBDXYrbd3pJlDSWeK_T0DIbXJbc3PiCMH0fb1vdaXNUQq0k14bEXMoC0kZMXyOZPjI7X0pAFtwA1iDJNul8gz4L1lGpk8LnyciH9ztwUWMbQy192xiT1CJKtbgmdJe9enjiB26pAVLNs9qbWjeD66XRxh7"/>
+</div>
+<div class="md:col-span-1 row-span-1 group relative bg-charcoal rounded-2xl overflow-hidden border border-white/5 hover:border-vibrant-orange/30 transition-all duration-500">
+<div class="absolute inset-0 bg-gradient-to-br from-gray-900 to-black"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full z-10">
+<div class="flex gap-3 mb-4">
+<span class="px-3 py-1 text-xs font-bold uppercase tracking-wider bg-vibrant-orange/10 text-vibrant-orange border border-vibrant-orange/20 rounded">AI</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-2">Sentiment Analyzer</h3>
+<p class="text-gray-500 text-base font-light">Real-time social media sentiment analysis tool.</p>
+</div>
+<span class="material-symbols-outlined absolute top-8 right-8 text-7xl text-white/5 group-hover:text-vibrant-orange/10 transition-colors duration-500">psychology</span>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 bg-background-dark border-t border-white/5" id="contact">
+<div class="max-w-4xl mx-auto px-4 text-center">
+<h2 class="text-5xl font-bold text-white mb-8">Let's Build Something Together</h2>
+<p class="text-gray-500 mb-12 text-xl font-light">Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+<a class="inline-flex items-center gap-4 text-3xl md:text-4xl font-bold text-vibrant-orange hover:text-white transition-all border-b-2 border-vibrant-orange hover:border-white pb-2 mb-20" href="mailto:tkofficial2004@gmail.com">
+            tkofficial2004@gmail.com
+        </a>
+<div class="flex justify-center gap-12 mb-20">
+<a class="text-gray-500 hover:text-vibrant-orange transition-all transform hover:scale-110" href="#">
+<img alt="GitHub" class="w-10 h-10 filter invert opacity-50 hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgT4dj5rC7uVmqmDlpDbhk-DRj8oCv7hbLG-OqpgS2yly_N0fRITelygbBD01eO9R46l4PFlwozGdrQ6xGNTemE3fJa-02MJTkALFV2u56lRGV1tOX8DDxE6cDGIheCSdCbtN-Lw9vz5GtGoWSpCLu_vKOn0vVFCiuHFB4JwB9MXsdRsBPWgwgc8WaGmOvJREmtZn2WpsaLJxi7Lu3n4jTLnS2MaLCx3Ncc2-oXnChouKM4EsfRpb3etpCCMvdoRojR49tOvvO9_Nk"/>
+</a>
+<a class="text-gray-500 hover:text-vibrant-orange transition-all transform hover:scale-110" href="#">
+<img alt="LinkedIn" class="w-10 h-10 filter grayscale brightness-50 hover:grayscale-0 hover:brightness-100 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5_kyxtN60uIfu4Y6bdOVXERKcpxy4jZJMAwTqdDOX-AuTzVlrgi9VbXUKTLI8kCEvwqY7CHQlQMU34iqG80y6or9nnxL1UC2fC_qVOzjokziX_J8Wq2pCgBSAaf1Xe21ztlGoeb7nWzkFDQBpAK784YPuAkeiUKuCXJR7aKNGCAsZBPezmYp-NA0OqQo16GeXx9v65OazGCAaAVXqAJsI7JkatMxcz-ohpSVXU2MCiKzI19DRVIH_e-ch808iRvEJJEoQg1G7Icqu"/>
+</a>
+<a class="text-gray-500 hover:text-vibrant-orange transition-all transform hover:scale-110" href="#">
+<img alt="Twitter" class="w-10 h-10 filter grayscale brightness-50 hover:grayscale-0 hover:brightness-100 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2NvDBx1P-prIjkrrLaBw3qMQ2dKx_QxRA1gbEP-jwSc-_cEKai6mYR_kchXA_Z6Phyh9X9RMtWnm9EWNz5fjOSXQmuvgQFspuzjxkVnM_Jrb0Bs_B1VBjXlcTGvuqQItezH-AwRi1dpcK9RDX7trBg7Zy_gQk9bkJMnUinDV_QhN_NVZWPx5bgjiUHfkCdAakWh-P_RSJpCsdh6AXNYpdUBpXpi93QfP6_SYnUwAENoQofUBoJ6Xyu4C0EwL2ZyW3YZo8luCA6n1_"/>
+</a>
+</div>
+<footer class="text-gray-600 text-sm uppercase tracking-[0.2em] font-medium">
+<p>© 2024 Tarun Kumar. Crafted with Heritage &amp; Tech.</p>
+</footer>
+</div>
+</section>
+
+</body></html>
