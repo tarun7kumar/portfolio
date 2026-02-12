@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import HeroBackground from "./HeroBackground";
+import { Magnetic } from "./ui/ios-pointer";
 
 export default function Hero() {
     return (
@@ -59,23 +60,27 @@ export default function Hero() {
                         transition={{ duration: 0.5, delay: 0.8 }}
                         className="flex flex-col sm:flex-row gap-8 sm:items-center"
                     >
-                        <Link
-                            href="#projects"
-                            className="group flex items-center gap-2 text-white/90 font-medium text-lg hover:text-vibrant-orange transition-colors"
-                        >
-                            Projects
-                            <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
-                        </Link>
+                        <Magnetic>
+                            <Link
+                                href="#projects"
+                                className="group flex items-center gap-2 text-white/90 font-medium text-lg hover:text-vibrant-orange transition-colors"
+                            >
+                                Projects
+                                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
+                            </Link>
+                        </Magnetic>
 
-                        <Link
-                            href="/resume.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-gray-400 font-medium text-lg hover:text-white transition-colors relative group"
-                        >
-                            Resume
-                            <span className="absolute left-0 bottom-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full" />
-                        </Link>
+                        <Magnetic>
+                            <Link
+                                href="/resume.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-gray-400 font-medium text-lg hover:text-white transition-colors relative group"
+                            >
+                                Resume
+                                <span className="absolute left-0 bottom-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full" />
+                            </Link>
+                        </Magnetic>
                     </motion.div>
                 </div>
             </div>

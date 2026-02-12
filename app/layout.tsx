@@ -6,6 +6,7 @@ import "devicon/devicon.min.css";
 import CursorGlow from "@/components/CursorGlow";
 // import HeroBackground from "@/components/HeroBackground"; // Removing old background
 import LiquidEther from "@/components/LiquidEther";
+import { PointerProvider } from "@/components/ui/ios-pointer";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -75,32 +76,34 @@ export default function RootLayout({
       <body
         className={`${jakarta.variable} ${lexend.variable} ${cormorant.variable} ${spaceGrotesk.variable} ${montserrat.variable} ${poppins.variable} ${inter.variable} ${dmSans.variable} antialiased text-white`}
       >
-        {/* Replaced existing background elements with LiquidEther */}
-        <LiquidEther
-          className="fixed inset-0 -z-10"
-          colors={['#E84A33', '#ff6a3d', '#ff3d2e']} // Updated colors
-          mouseForce={20}
-          cursorSize={100}
-          isViscous={true}
-          viscous={30}
-          iterationsViscous={32}
-          iterationsPoisson={32}
-          resolution={0.5}
-          isBounce={false}
-          autoDemo={true}
-          autoSpeed={0.5}
-          autoIntensity={2.2}
-          takeoverDuration={0.25}
-          autoResumeDelay={3000}
-          autoRampDuration={0.6}
-          style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -10 }}
-        />
-        <CursorGlow />
+        <PointerProvider>
+          {/* Replaced existing background elements with LiquidEther */}
+          <LiquidEther
+            className="fixed inset-0 -z-10"
+            colors={['#E84A33', '#ff6a3d', '#ff3d2e']} // Updated colors
+            mouseForce={20}
+            cursorSize={100}
+            isViscous={true}
+            viscous={30}
+            iterationsViscous={32}
+            iterationsPoisson={32}
+            resolution={0.5}
+            isBounce={false}
+            autoDemo={true}
+            autoSpeed={0.5}
+            autoIntensity={2.2}
+            takeoverDuration={0.25}
+            autoResumeDelay={3000}
+            autoRampDuration={0.6}
+            style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -10 }}
+          />
+          <CursorGlow />
 
-        {/* Main Content */}
-        <div className="relative z-10">
-          {children}
-        </div>
+          {/* Main Content */}
+          <div className="relative z-10">
+            {children}
+          </div>
+        </PointerProvider>
       </body>
     </html>
   );

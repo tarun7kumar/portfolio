@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Magnetic } from "./ui/ios-pointer";
 
 const skillCategories = [
     {
@@ -91,15 +92,16 @@ export default function Skills() {
 
                             <div className="flex flex-wrap gap-4">
                                 {category.skills.map((skill, index) => (
-                                    <motion.div
-                                        key={index}
-                                        whileHover={{ scale: 1.1, backgroundColor: "rgba(255, 255, 255, 0.1)" }}
-                                        whileTap={{ scale: 0.95 }}
-                                        className="flex items-center gap-3 bg-white/5 text-gray-300 px-5 py-3 rounded-full border border-white/5 cursor-pointer transition-colors duration-300 group"
-                                    >
-                                        <i className={`${skill.icon} text-xl group-hover:text-vibrant-orange transition-colors duration-300`}></i>
-                                        <span className="font-medium text-sm font-space group-hover:text-white transition-colors duration-300">{skill.name}</span>
-                                    </motion.div>
+                                    <Magnetic key={index}>
+                                        <motion.div
+                                            whileHover={{ scale: 1.1, backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+                                            whileTap={{ scale: 0.95 }}
+                                            className="flex items-center gap-3 bg-white/5 text-gray-300 px-5 py-3 rounded-full border border-white/5 cursor-pointer transition-colors duration-300 group"
+                                        >
+                                            <i className={`${skill.icon} text-xl group-hover:text-vibrant-orange transition-colors duration-300`}></i>
+                                            <span className="font-medium text-sm font-space group-hover:text-white transition-colors duration-300">{skill.name}</span>
+                                        </motion.div>
+                                    </Magnetic>
                                 ))}
                             </div>
                         </motion.div>

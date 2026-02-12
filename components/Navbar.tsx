@@ -5,7 +5,8 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import GooeyNav from "./GooeyNav";
+import { Magnetic } from "./ui/ios-pointer";
+
 
 const navItems = [
     { name: "About", href: "#about" },
@@ -41,30 +42,39 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16 sm:h-20">
                     {/* Logo */}
-                    <Link
-                        href="/"
-                        className="flex-shrink-0 group relative z-50"
-                        onClick={(e) => {
-                            if (window.location.pathname === '/') {
-                                e.preventDefault();
-                                window.scrollTo({ top: 0, behavior: 'smooth' });
-                            }
-                        }}
-                    >
-                        <span
-                            className="text-3xl font-montserrat font-black tracking-[-1px] text-white"
-                            style={{ fontFamily: 'var(--font-montserrat)' }}
+                    <Magnetic>
+                        <Link
+                            href="/"
+                            className="flex-shrink-0 group relative z-50 block"
+                            onClick={(e) => {
+                                if (window.location.pathname === '/') {
+                                    e.preventDefault();
+                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                }
+                            }}
                         >
-                            tK<span className="text-vibrant-orange transition-transform duration-300 group-hover:scale-125 inline-block">.</span>
-                        </span>
-                    </Link>
+                            <span
+                                className="text-3xl font-montserrat font-black tracking-[-1px] text-white"
+                                style={{ fontFamily: 'var(--font-montserrat)' }}
+                            >
+                                tK<span className="text-vibrant-orange transition-transform duration-300 group-hover:scale-125 inline-block">.</span>
+                            </span>
+                        </Link>
+                    </Magnetic>
 
                     {/* Desktop Nav */}
-                    <div className="hidden md:block">
-                        <GooeyNav
-                            items={navItems.map(item => ({ label: item.name, href: item.href }))}
-                            initialActiveIndex={0}
-                        />
+                    <div className="hidden md:flex items-center space-x-12">
+                        {navItems.map((item) => (
+                            <Magnetic key={item.name}>
+                                <Link
+                                    href={item.href}
+                                    className="text-lg font-medium text-gray-300 hover:text-white transition-colors relative group font-dm-sans block"
+                                >
+                                    {item.name}
+                                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-vibrant-orange transition-all duration-300 group-hover:w-full" />
+                                </Link>
+                            </Magnetic>
+                        ))}
                     </div>
 
                     {/* Mobile Menu Button */}

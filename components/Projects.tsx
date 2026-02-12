@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Github } from "lucide-react";
 import Link from "next/link";
+import { Magnetic } from "./ui/ios-pointer";
 
 const projects = [
     {
@@ -107,19 +108,23 @@ export default function Projects() {
                                     {/* Links */}
                                     <div className="flex items-center gap-6 pt-2">
                                         {project.link && (
-                                            <Link
-                                                href={project.link}
-                                                className="inline-flex items-center gap-2 text-white font-semibold font-inter hover:text-vibrant-orange transition-colors group/link"
-                                            >
-                                                View Project <ArrowUpRight size={18} className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
-                                            </Link>
+                                            <Magnetic>
+                                                <Link
+                                                    href={project.link}
+                                                    className="inline-flex items-center gap-2 text-white font-semibold font-inter hover:text-vibrant-orange transition-colors group/link"
+                                                >
+                                                    View Project <ArrowUpRight size={18} className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                                                </Link>
+                                            </Magnetic>
                                         )}
-                                        <Link
-                                            href={project.github}
-                                            className="inline-flex items-center gap-2 text-gray-500 font-medium font-inter hover:text-white transition-colors"
-                                        >
-                                            <Github size={18} /> Code
-                                        </Link>
+                                        <Magnetic>
+                                            <Link
+                                                href={project.github}
+                                                className="inline-flex items-center gap-2 text-gray-500 font-medium font-inter hover:text-white transition-colors"
+                                            >
+                                                <Github size={18} /> Code
+                                            </Link>
+                                        </Magnetic>
                                     </div>
                                 </div>
                             </div>
@@ -133,13 +138,15 @@ export default function Projects() {
                 </div>
 
                 <div className="mt-32 text-center">
-                    <Link
-                        href="https://github.com/tarun7kumar"
-                        target="_blank"
-                        className="inline-block px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-bold font-inter rounded-full border border-white/10 transition-all duration-300"
-                    >
-                        View More on GitHub
-                    </Link>
+                    <Magnetic>
+                        <Link
+                            href="https://github.com/tarun7kumar"
+                            target="_blank"
+                            className="inline-block px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-bold font-inter rounded-full border border-white/10 transition-all duration-300"
+                        >
+                            View More on GitHub
+                        </Link>
+                    </Magnetic>
                 </div>
             </div>
         </section>

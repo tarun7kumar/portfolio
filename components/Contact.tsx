@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Mail, Github, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
+import { Magnetic } from "./ui/ios-pointer";
 
 export default function Contact() {
     return (
@@ -19,13 +20,15 @@ export default function Contact() {
                         Whether you have a question, a project in mind, or just want to say hi, I'll try my best to get back to you!
                     </p>
 
-                    <a
-                        href="mailto:tkofficial2004@gmail.com"
-                        className="inline-flex items-center gap-4 text-2xl md:text-4xl font-bold text-vibrant-orange hover:text-white transition-all border-b-2 border-vibrant-orange hover:border-white pb-2 mb-20 font-clash"
-                    >
-                        <Mail className="w-8 h-8 md:w-10 md:h-10" />
-                        tkofficial2004@gmail.com
-                    </a>
+                    <Magnetic>
+                        <a
+                            href="mailto:tkofficial2004@gmail.com"
+                            className="inline-flex items-center gap-4 text-2xl md:text-4xl font-bold text-vibrant-orange hover:text-white transition-all border-b-2 border-vibrant-orange hover:border-white pb-2 mb-20 font-clash"
+                        >
+                            <Mail className="w-8 h-8 md:w-10 md:h-10" />
+                            tkofficial2004@gmail.com
+                        </a>
+                    </Magnetic>
 
                     <div className="flex justify-center gap-12 mb-20">
                         {[
@@ -33,13 +36,14 @@ export default function Contact() {
                             { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
                             { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
                         ].map((social, index) => (
-                            <Link
-                                key={social.label}
-                                href={social.href}
-                                className="text-gray-500 hover:text-vibrant-orange transition-all transform hover:scale-110 hover:-translate-y-1"
-                            >
-                                <social.icon size={32} strokeWidth={1.5} />
-                            </Link>
+                            <Magnetic key={social.label}>
+                                <Link
+                                    href={social.href}
+                                    className="text-gray-500 hover:text-vibrant-orange transition-all transform hover:scale-110 hover:-translate-y-1 block"
+                                >
+                                    <social.icon size={32} strokeWidth={1.5} />
+                                </Link>
+                            </Magnetic>
                         ))}
                     </div>
 
