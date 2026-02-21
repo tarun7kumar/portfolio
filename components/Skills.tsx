@@ -43,7 +43,7 @@ const skillCategories = [
 
 export default function Skills() {
     return (
-        <section id="skills" className="py-32 relative overflow-hidden">
+        <section id="skills" className="py-32 relative overflow-hidden bg-[#0B1120]">
             {/* Background "SKILLS" Text */}
             <div className="absolute top-150 right-10 -translate-y-1/2 select-none pointer-events-none hidden lg:block z-0">
                 <h2 className="text-[12rem] font-black text-white/[0.03] tracking-tighter leading-none font-display -rotate-90 whitespace-nowrap">
@@ -66,12 +66,12 @@ export default function Skills() {
 
                     <div className="text-left">
                         <h2 className="text-4xl md:text-6xl font-inter font-extrabold text-white leading-tight tracking-tighter mb-8">
-                            what I <span className="text-vibrant-orange">work_</span>with.
+                            what I <span className="text-[#14adff]">work_</span>with.
                         </h2>
                         <div className="flex justify-start">
-                            <div className="w-16 h-1.5 bg-vibrant-orange mb-8" />
+                            <div className="w-16 h-1.5 bg-[#14adff] mb-8" />
                         </div>
-                        <p className="flex justify-start text-gray-400 text-lg font-poppins max-w-2xl ">
+                        <p className="flex justify-start text-gray-400 text-lg font-inter max-w-2xl ">
                             A comprehensive toolkit for building scalable, high-performance applications.
                         </p>
                     </div>
@@ -86,7 +86,7 @@ export default function Skills() {
                             viewport={{ once: true }}
                             transition={{ delay: catIndex * 0.1 }}
                         >
-                            <h3 className="text-xl font-bold text-white mb-8 border-l-4 border-vibrant-orange pl-4 font-inter">
+                            <h3 className="text-xl font-bold text-white mb-8 border-l-4 border-[#14adff] pl-4 font-inter">
                                 {category.title}
                             </h3>
 
@@ -98,8 +98,8 @@ export default function Skills() {
                                             whileTap={{ scale: 0.95 }}
                                             className="flex items-center gap-3 bg-white/5 text-gray-300 px-5 py-3 rounded-full border border-white/5 cursor-pointer transition-colors duration-300 group"
                                         >
-                                            <i className={`${skill.icon} text-xl group-hover:text-vibrant-orange transition-colors duration-300`}></i>
-                                            <span className="font-medium text-sm font-space group-hover:text-white transition-colors duration-300">{skill.name}</span>
+                                            <i className={`${skill.icon} text-xl group-hover:text-[#14adff] transition-colors duration-300`}></i>
+                                            <span className="font-medium text-sm font-inter group-hover:text-white transition-colors duration-300">{skill.name}</span>
                                         </motion.div>
                                     </Magnetic>
                                 ))}

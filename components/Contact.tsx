@@ -7,7 +7,7 @@ import { Magnetic } from "./ui/ios-pointer";
 
 export default function Contact() {
     return (
-        <section id="contact" className="py-32 border-t border-white/5 relative overflow-hidden">
+        <section id="contact" className="py-32 border-t border-white/5 relative overflow-hidden bg-[#0B1120]">
 
             <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
                 <motion.div
@@ -15,15 +15,15 @@ export default function Contact() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 font-clash">Let's Build Something Together</h2>
-                    <p className="text-gray-500 mb-12 text-xl font-light font-space max-w-2xl mx-auto">
+                    <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 font-display">Let's Build Something Together</h2>
+                    <p className="text-gray-500 mb-12 text-xl font-light font-inter max-w-2xl mx-auto">
                         Whether you have a question, a project in mind, or just want to say hi, I'll try my best to get back to you!
                     </p>
 
                     <Magnetic>
                         <a
                             href="mailto:tkofficial2004@gmail.com"
-                            className="inline-flex items-center gap-4 text-2xl md:text-4xl font-bold text-vibrant-orange hover:text-white transition-all border-b-2 border-vibrant-orange hover:border-white pb-2 mb-20 font-clash"
+                            className="inline-flex items-center gap-4 text-2xl md:text-4xl font-bold text-[#14adff] hover:text-white transition-all border-b-2 border-[#14adff] hover:border-white pb-2 mb-20 font-display"
                         >
                             <Mail className="w-8 h-8 md:w-10 md:h-10" />
                             tkofficial2004@gmail.com
@@ -39,7 +39,7 @@ export default function Contact() {
                             <Magnetic key={social.label}>
                                 <Link
                                     href={social.href}
-                                    className="text-gray-500 hover:text-vibrant-orange transition-all transform hover:scale-110 hover:-translate-y-1 block"
+                                    className="text-gray-500 hover:text-[#14adff] transition-all transform hover:scale-110 hover:-translate-y-1 block"
                                 >
                                     <social.icon size={32} strokeWidth={1.5} />
                                 </Link>

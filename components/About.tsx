@@ -1,11 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export default function About() {
     return (
-        <section id="about" className="py-32 relative overflow-hidden min-h-screen flex items-center">
+        <section id="about" className="py-32 relative overflow-hidden min-h-screen flex items-center bg-[#0B1120]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
 
                 {/* Background "STORY" Text */}
@@ -30,27 +29,27 @@ export default function About() {
                             </div>
 
                             <h2 className="text-4xl md:text-6xl font-inter font-black text-white leading-tight tracking-tighter mb-4">
-                                about <span className="text-vibrant-orange">ME.</span>
+                                about <span className="text-[#14adff]">ME.</span>
                             </h2>
 
                             {/* Refined Gradient Underline */}
-                            <div className="w-24 h-1.5 bg-gradient-to-r from-vibrant-orange to-transparent mb-8 rounded-full opacity-80" />
+                            <div className="w-24 h-1.5 bg-gradient-to-r from-[#14adff] to-transparent mb-8 rounded-full opacity-80" />
 
                             {/* Strong Subheading */}
-                            <h3 className="text-xl md:text-2xl font-bold text-white mb-6 font-clash leading-snug">
+                            <h3 className="text-xl md:text-2xl font-bold text-white mb-6 font-display leading-snug">
                                 Building reliable systems from the ground up.
                             </h3>
 
                             {/* Refined Paragraphs */}
-                            <p className="text-gray-400 text-lg leading-relaxed font-space font-light mb-6 max-w-xl">
+                            <p className="text-gray-400 text-lg leading-relaxed font-inter font-light mb-6 max-w-xl">
                                 I build to understand how systems truly work. As an engineering student, I focus on developing reliable and scalable web applications with a strong backend foundation.
                             </p>
 
-                            <p className="text-gray-400 text-lg leading-relaxed font-space font-light mb-6 max-w-xl">
+                            <p className="text-gray-400 text-lg leading-relaxed font-inter font-light mb-6 max-w-xl">
                                 I’ve worked on full-stack projects that strengthened my understanding of APIs, databases, and system architecture. I care about clean, maintainable code and building solutions that are practical and efficient.
                             </p>
 
-                            <p className="text-gray-400 text-lg leading-relaxed font-space font-light mb-8 max-w-xl">
+                            <p className="text-gray-400 text-lg leading-relaxed font-inter font-light mb-8 max-w-xl">
                                 Currently, I’m focused on backend development and cloud technologies, continuously improving my ability to design systems that scale.
                             </p>
                         </motion.div>
@@ -66,13 +65,13 @@ export default function About() {
                             className="relative w-full max-w-sm aspect-[4/5]"
                         >
                             {/* Image Container with Grayscale & Soft Glow */}
-                            <div className="relative w-full h-full rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 ease-in-out shadow-[0_0_40px_rgba(232,74,51,0.15)]">
+                            <div className="relative w-full h-full rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 ease-in-out shadow-[0_0_40px_rgba(20,173,255,0.15)]">
                                 <img
                                     src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"
                                     alt="Tarun Kumar"
                                     className="object-cover w-full h-full"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-background-dark/80 via-transparent to-transparent opacity-40" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#0B1120]/80 via-transparent to-transparent opacity-40" />
                             </div>
 
                             {/* Subtle Decorative Frame */}

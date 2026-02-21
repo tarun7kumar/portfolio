@@ -35,7 +35,7 @@ const projects = [
 
 export default function Projects() {
     return (
-        <section id="projects" className="py-32 relative overflow-hidden">
+        <section id="projects" className="py-32 relative overflow-hidden bg-[#0B1120]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
                 {/* Section Header */}
@@ -52,12 +52,12 @@ export default function Projects() {
                     </div>
 
                     <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-8 font-inter leading-tight tracking-tighter">
-                        Things I’ve <span className="text-vibrant-orange">Built.</span>
+                        Things I’ve <span className="text-[#14adff]">Built.</span>
                     </h2>
                     <div className="flex justify-start">
-                        <div className="w-16 h-1.5 bg-vibrant-orange mb-8" />
+                        <div className="w-16 h-1.5 bg-[#14adff] mb-8" />
                     </div>
-                    <p className="text-gray-400 text-lg font-poppins max-w-2xl leading-relaxed">
+                    <p className="text-gray-400 text-lg font-inter max-w-2xl leading-relaxed">
                         Projects I built while learning how real systems behave.
                     </p>
                 </motion.div>
@@ -78,20 +78,20 @@ export default function Projects() {
                                 {/* Content Side */}
                                 <div className="flex-1 space-y-6">
                                     <div className="space-y-3">
-                                        <h3 className="text-3xl font-bold text-white font-inter tracking-tight group-hover:text-vibrant-orange transition-colors duration-300">
+                                        <h3 className="text-3xl font-bold text-white font-inter tracking-tight group-hover:text-[#14adff] transition-colors duration-300">
                                             {project.title}
                                         </h3>
-                                        <p className="text-gray-400 text-lg leading-relaxed font-poppins max-w-2xl">
+                                        <p className="text-gray-400 text-lg leading-relaxed font-inter max-w-2xl">
                                             {project.description}
                                         </p>
                                     </div>
 
-                                    {/* Highlights (Only for the first project as per vibe, or all if available) */}
+                                    {/* Highlights */}
                                     {project.highlights && (
                                         <ul className="space-y-2 mb-6">
                                             {project.highlights.map((highlight, hIndex) => (
-                                                <li key={hIndex} className="flex items-center text-gray-500 text-sm font-poppins">
-                                                    <span className="w-1.5 h-1.5 rounded-full bg-vibrant-orange mr-3" />
+                                                <li key={hIndex} className="flex items-center text-gray-500 text-sm font-inter">
+                                                    <span className="w-1.5 h-1.5 rounded-full bg-[#14adff] mr-3" />
                                                     {highlight}
                                                 </li>
                                             ))}
@@ -111,7 +111,7 @@ export default function Projects() {
                                             <Magnetic>
                                                 <Link
                                                     href={project.link}
-                                                    className="inline-flex items-center gap-2 text-white font-semibold font-inter hover:text-vibrant-orange transition-colors group/link"
+                                                    className="inline-flex items-center gap-2 text-white font-semibold font-inter hover:text-[#14adff] transition-colors group/link"
                                                 >
                                                     View Project <ArrowUpRight size={18} className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
                                                 </Link>
