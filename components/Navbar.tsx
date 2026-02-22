@@ -22,7 +22,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <nav className={`fixed top-0 inset-x-0 z-50 h-20 px-8 md:px-16 flex items-center justify-between transition-all duration-500 ${isScrolled ? "bg-[#0B1120]/70 backdrop-blur-lg border-b border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)]" : "bg-transparent border-b border-transparent"
+        <nav className={`fixed top-0 inset-x-0 z-50 h-20 px-8 md:px-16 flex items-center justify-between transition-all duration-500 ${isScrolled ? "bg-[#000000]/70 backdrop-blur-lg border-b border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)]" : "bg-transparent border-b border-transparent"
             }`}>
             {/* Logo */}
             <Link
@@ -35,8 +35,8 @@ export default function Navbar() {
                     }
                 }}
             >
-                <span className="text-3xl font-poppins font-extrabold tracking-tight text-[#F8FAFC]">
-                    tK<span className="text-[#22D3EE] transition-transform duration-300 group-hover:scale-[1.15] inline-block">.</span>
+                <span className="text-3xl font-poppins font-extrabold tracking-tight text-[#F3F4F6]">
+                    tK<span className="text-[#FF6A00] transition-transform duration-300 group-hover:scale-[1.15] inline-block">.</span>
                 </span>
             </Link>
 
@@ -46,7 +46,7 @@ export default function Navbar() {
                     <Link
                         key={item.name}
                         href={item.href}
-                        className="text-base font-dm-sans font-medium text-[#94A3B8] hover:text-[#F8FAFC] transition-colors"
+                        className="text-base font-dm-sans font-medium text-[#9CA3AF] hover:text-[#FF6A00] transition-colors"
                     >
                         {item.name}
                     </Link>

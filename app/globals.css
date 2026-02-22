@@ -14,12 +14,7 @@
   --font-inter: var(--font-inter), sans-serif;
   --font-jakarta: var(--font-jakarta), sans-serif;
   --font-poppins: var(--font-poppins), sans-serif;
-}
-
-:root {
-  --background: #000000;
-  --foreground: #F3F4F6;
-  --accent: #FF6A00;
+  --primary: #FF6A00;
 }
 
 /* ===== BASE ===== */

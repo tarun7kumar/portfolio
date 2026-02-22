@@ -4,8 +4,6 @@ import "./globals.css";
 import "devicon/devicon.min.css";
 
 
-import { PointerProvider } from "@/components/ui/ios-pointer";
-
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
   subsets: ["latin"],
@@ -65,6 +63,7 @@ export const metadata: Metadata = {
 
 
 import RevealOverlay from "@/components/RevealOverlay";
+import { ScrollProgress } from "@/components/ui/scroll-progress";
 
 export default function RootLayout({
   children,
@@ -76,14 +75,13 @@ export default function RootLayout({
       <body
         className={`${jakarta.variable} ${lexend.variable} ${cormorant.variable} ${spaceGrotesk.variable} ${montserrat.variable} ${poppins.variable} ${inter.variable} ${dmSans.variable} antialiased text-white bg-[#000000]`}
       >
-        <PointerProvider>
-          <RevealOverlay />
+        <RevealOverlay />
+        <ScrollProgress className="top-[80px]" />
 
-          {/* Main Content */}
-          <div className="relative z-10">
-            {children}
-          </div>
-        </PointerProvider>
+        {/* Main Content */}
+        <div className="relative z-10">
+          {children}
+        </div>
       </body>
     </html>
   );
