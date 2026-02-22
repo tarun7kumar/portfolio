@@ -7,7 +7,7 @@ import { Magnetic } from "./ui/ios-pointer";
 
 export default function Contact() {
     return (
-        <section id="contact" className="py-32 border-t border-white/5 relative overflow-hidden bg-[#0B1120]">
+        <section id="contact" className="py-32 border-t border-white/5 relative overflow-hidden bg-[#0A0A0A]">
 
             <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
                 <motion.div
@@ -23,7 +23,7 @@ export default function Contact() {
                     <Magnetic>
                         <a
                             href="mailto:tkofficial2004@gmail.com"
-                            className="inline-flex items-center gap-4 text-2xl md:text-4xl font-bold text-[#14adff] hover:text-white transition-all border-b-2 border-[#14adff] hover:border-white pb-2 mb-20 font-display"
+                            className="inline-flex items-center gap-4 text-2xl md:text-4xl font-bold text-[#FF6A00] transition-all border-b-2 border-[#FF6A00] hover:text-[#E65C00] hover:border-[#E65C00] pb-2 mb-20 font-display"
                         >
                             <Mail className="w-8 h-8 md:w-10 md:h-10" />
                             tkofficial2004@gmail.com
@@ -39,7 +39,7 @@ export default function Contact() {
                             <Magnetic key={social.label}>
                                 <Link
                                     href={social.href}
-                                    className="text-gray-500 hover:text-[#14adff] transition-all transform hover:scale-110 hover:-translate-y-1 block"
+                                    className="text-gray-500 hover:text-[#E65C00] transition-all transform hover:scale-110 hover:-translate-y-1 block"
                                 >
                                     <social.icon size={32} strokeWidth={1.5} />
                                 </Link>

@@ -40,7 +40,7 @@ const montserrat = Montserrat({
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["300", "400", "500", "600", "800"],
   display: "swap",
 });
 
@@ -74,7 +74,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <body
-        className={`${jakarta.variable} ${lexend.variable} ${cormorant.variable} ${spaceGrotesk.variable} ${montserrat.variable} ${poppins.variable} ${inter.variable} ${dmSans.variable} antialiased text-white bg-[#0B1120]`}
+        className={`${jakarta.variable} ${lexend.variable} ${cormorant.variable} ${spaceGrotesk.variable} ${montserrat.variable} ${poppins.variable} ${inter.variable} ${dmSans.variable} antialiased text-white bg-[#000000]`}
       >
         <PointerProvider>
           <RevealOverlay />

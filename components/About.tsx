@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
     return (
-        <section id="about" className="py-32 relative overflow-hidden min-h-screen flex items-center bg-[#0B1120]">
+        <section id="about" className="py-32 relative overflow-hidden min-h-screen flex items-center bg-[#000000]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
 
                 {/* Background "STORY" Text */}
@@ -29,11 +29,11 @@ export default function About() {
                             </div>
 
                             <h2 className="text-4xl md:text-6xl font-inter font-black text-white leading-tight tracking-tighter mb-4">
-                                about <span className="text-[#14adff]">ME.</span>
+                                about <span className="text-[#FF6A00]">ME.</span>
                             </h2>
 
-                            {/* Refined Gradient Underline */}
-                            <div className="w-24 h-1.5 bg-gradient-to-r from-[#14adff] to-transparent mb-8 rounded-full opacity-80" />
+                            {/* Refined Solid Underline */}
+                            <div className="w-24 h-1.5 bg-[#FF6A00] mb-8 rounded-full" />
 
                             {/* Strong Subheading */}
                             <h3 className="text-xl md:text-2xl font-bold text-white mb-6 font-display leading-snug">
@@ -65,13 +65,13 @@ export default function About() {
                             className="relative w-full max-w-sm aspect-[4/5]"
                         >
                             {/* Image Container with Grayscale & Soft Glow */}
-                            <div className="relative w-full h-full rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 ease-in-out shadow-[0_0_40px_rgba(20,173,255,0.15)]">
+                            <div className="relative w-full h-full rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 ease-in-out shadow-[0_0_40px_rgba(255,106,0,0.15)]">
                                 <img
                                     src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"
                                     alt="Tarun Kumar"
                                     className="object-cover w-full h-full"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#0B1120]/80 via-transparent to-transparent opacity-40" />
+                                <div className="absolute inset-0 bg-[rgba(10,10,10,0.55)]" />
                             </div>
 
                             {/* Subtle Decorative Frame */}
