@@ -1,22 +1,9 @@
 "use client";
 
-import Silk from "@/components/Silk";
 
 export default function Hero() {
     return (
-        <section className="relative min-h-screen w-full overflow-hidden bg-[#0B1120]">
-            {/* Silk Background - Edge to Edge - Raw Output */}
-            <div className="absolute inset-0 z-0">
-                <Silk
-                    speed={1.5}
-                    scale={1}
-                    color="#3A1D1D"
-                    noiseIntensity={1.0}
-                    rotation={0}
-                />
-            </div>
-
-            {/* Content */}
+        <section className="relative min-h-screen w-full bg-transparent">            {/* Content */}
             <div className="relative z-10 max-w-7xl mx-auto h-screen flex items-center px-8 md:px-16">
                 <div className="max-w-4xl">
                     <p className="text-[#F3F4F6] mb-4 text-sm tracking-wide font-semibold">

@@ -1,3 +1,5 @@
+"use client";
+
 /* eslint-disable react/no-unknown-property */
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { forwardRef, useRef, useMemo, useLayoutEffect } from 'react';
@@ -123,7 +125,7 @@ const Silk = ({ speed = 1.5, scale = 1, color = '#7B7481', noiseIntensity = 1.5,
     );
 
     return (
-        <div className="w-full h-screen">
+        <div className="w-full h-full absolute inset-0">
             <Canvas dpr={[1, 2]} frameloop="always">
                 <SilkPlane ref={meshRef} uniforms={uniforms} />
             </Canvas>
