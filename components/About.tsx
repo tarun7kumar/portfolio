@@ -1,14 +1,29 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function About() {
+    const containerRef = useRef<HTMLElement>(null);
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["0 1", "0.6 1"] // Starts animating when top of section hits bottom of viewport, ends when it's 60% up
+    });
+
+    const scale = useTransform(scrollYProgress, [0, 1], [0.85, 1]);
+    const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
+    const rotateX = useTransform(scrollYProgress, [0, 1], [20, 0]);
+    const y = useTransform(scrollYProgress, [0, 1], [150, 0]);
+
     return (
-        <section id="about" className="py-24 md:py-32 relative overflow-hidden min-h-screen flex items-center bg-transparent">
+        <section id="about" ref={containerRef} style={{ perspective: "1200px" }} className="py-24 md:py-32 relative overflow-hidden min-h-screen flex items-center bg-transparent">
             <div className="max-w-[85rem] mx-auto px-4 md:px-8 relative z-10 w-full">
 
                 {/* Main Card Container */}
-                <div className="bg-[#050505] border border-zinc-900 rounded-[2.5rem] p-8 md:p-14 lg:p-20 relative overflow-hidden ring-1 ring-white/5 shadow-2xl">
+                <motion.div 
+                    style={{ scale, opacity, rotateX, y, transformStyle: "preserve-3d" }}
+                    className="bg-[#050505] border border-zinc-900 rounded-[2.5rem] p-8 md:p-14 lg:p-20 relative overflow-hidden ring-1 ring-white/5 shadow-2xl"
+                >
 
                     {/* Background Decorative Dashed Lines */}
                     <div className="absolute inset-0 pointer-events-none z-0 hidden lg:block overflow-hidden">
@@ -75,7 +90,7 @@ export default function About() {
                         </div>
 
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );
