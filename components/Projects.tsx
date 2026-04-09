@@ -45,12 +45,6 @@ export default function Projects() {
                     viewport={{ once: true }}
                     className="mb-24 text-left"
                 >
-                    <div className="flex justify-start">
-                        <div className="text-gray-500 text-xs tracking-[0.3em] font-medium mb-8 border-l border-white/20 pl-4 uppercase">
-                            03 // Learning by Building
-                        </div>
-                    </div>
-
                     <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-8 font-inter leading-tight tracking-tighter">
                         Things I’ve <span className="text-[#FF6A00]">Built.</span>
                     </h2>
@@ -63,7 +57,7 @@ export default function Projects() {
                 </motion.div>
 
                 {/* Projects List */}
-                <div className="flex flex-col space-y-24">
+                <div className="flex flex-col space-y-12">
                     {projects.map((project, index) => (
                         <motion.div
                             key={index}
@@ -71,14 +65,14 @@ export default function Projects() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="group"
+                            className="group bg-[#0A0A0A] border border-white/10 rounded-2xl p-8 md:p-12 hover:border-white/20 hover:bg-[#111111] transition-all duration-300 relative overflow-hidden"
                         >
-                            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 md:gap-12">
+                            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 md:gap-12 relative z-10">
 
                                 {/* Content Side */}
                                 <div className="flex-1 space-y-6">
                                     <div className="space-y-3">
-                                        <h3 className="text-3xl font-bold text-white font-inter tracking-tight group-hover:text-[#E65C00] transition-colors duration-300">
+                                        <h3 className="text-3xl font-bold text-white font-inter tracking-tight group-hover:text-[#FF6A00] transition-colors duration-300">
                                             {project.title}
                                         </h3>
                                         <p className="text-gray-400 text-lg leading-relaxed font-inter max-w-2xl">
@@ -90,8 +84,8 @@ export default function Projects() {
                                     {project.highlights && (
                                         <ul className="space-y-2 mb-6">
                                             {project.highlights.map((highlight, hIndex) => (
-                                                <li key={hIndex} className="flex items-center text-gray-500 text-sm font-inter">
-                                                    <span className="w-1.5 h-1.5 rounded-full bg-[#FF6A00] mr-3" />
+                                                <li key={hIndex} className="flex items-center text-gray-400 text-sm font-inter">
+                                                    <span className="w-1.5 h-1.5 rounded-full bg-[#FF6A00] mr-3 shrink-0" />
                                                     {highlight}
                                                 </li>
                                             ))}
@@ -99,28 +93,28 @@ export default function Projects() {
                                     )}
 
                                     {/* Tech Stack */}
-                                    <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm font-mono text-gray-500 uppercase tracking-wider">
+                                    <div className="flex flex-wrap gap-x-3 gap-y-2 text-sm font-mono text-gray-300 uppercase tracking-wider">
                                         {project.tech.map((tech) => (
-                                            <span key={tech}>{tech}</span>
+                                            <span key={tech} className="bg-white/5 border border-white/5 px-3 py-1 rounded-full">{tech}</span>
                                         ))}
                                     </div>
 
                                     {/* Links */}
-                                    <div className="flex items-center gap-6 pt-2">
+                                    <div className="flex items-center gap-6 pt-6">
                                         {project.link && (
                                             <Magnetic>
                                                 <Link
                                                     href={project.link}
-                                                    className="inline-flex items-center gap-2 text-white font-semibold font-inter hover:text-[#E65C00] transition-colors group/link"
+                                                    className="inline-flex items-center justify-center gap-2 bg-white text-black px-6 py-3 rounded-full font-bold font-inter hover:bg-gray-200 hover:-translate-y-0.5 transition-all"
                                                 >
-                                                    View Project <ArrowUpRight size={18} className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                                                    View Project <ArrowUpRight size={18} />
                                                 </Link>
                                             </Magnetic>
                                         )}
                                         <Magnetic>
                                             <Link
                                                 href={project.github}
-                                                className="inline-flex items-center gap-2 text-gray-500 font-medium font-inter hover:text-white transition-colors"
+                                                className="inline-flex items-center gap-2 text-gray-400 font-medium font-inter hover:text-white transition-colors"
                                             >
                                                 <Github size={18} /> Code
                                             </Link>
@@ -128,21 +122,16 @@ export default function Projects() {
                                     </div>
                                 </div>
                             </div>
-
-                            {/* Divider */}
-                            {index !== projects.length - 1 && (
-                                <div className="w-full h-px bg-white/5 mt-24" />
-                            )}
                         </motion.div>
                     ))}
                 </div>
 
-                <div className="mt-32 text-center">
+                <div className="mt-24 text-center">
                     <Magnetic>
                         <Link
                             href="https://github.com/tarun7kumar"
                             target="_blank"
-                            className="inline-block px-8 py-4 border-2 border-[#FF6A00] text-[#FF6A00] font-bold font-inter rounded-full hover:bg-[rgba(255,106,0,0.1)] transition-all duration-300"
+                            className="inline-block px-10 py-4 bg-transparent border border-[#FF6A00] text-[#FF6A00] font-bold font-inter rounded-full hover:bg-[rgba(255,106,0,0.1)] hover:-translate-y-0.5 transition-all duration-300"
                         >
                             View More on GitHub
                         </Link>

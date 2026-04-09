@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Magnetic } from "./ui/ios-pointer";
+import ScrollRevealText from "./ScrollRevealText";
 
 const skillCategories = [
     {
@@ -43,10 +44,10 @@ const skillCategories = [
 
 export default function Skills() {
     return (
-        <section id="skills" className="py-32 relative overflow-hidden bg-[#000000]">
+        <section id="skills" className="py-32 relative overflow-hidden bg-transparent">
             {/* Background "SKILLS" Text */}
             <div className="absolute top-150 right-10 -translate-y-1/2 select-none pointer-events-none hidden lg:block z-0">
-                <h2 className="text-[12rem] font-black text-white/[0.03] tracking-tighter leading-none font-display -rotate-90 whitespace-nowrap">
+                <h2 className="text-[12rem] font-black text-gray-100 tracking-tighter leading-none font-display -rotate-90 whitespace-nowrap">
                     SKILLS
                 </h2>
             </div>
@@ -58,22 +59,17 @@ export default function Skills() {
                     viewport={{ once: true }}
                     className="mb-20"
                 >
-                    <div className="flex justify-start">
-                        <div className="text-gray-500 text-xs tracking-[0.3em] font-medium mb-8 border-r border-white/20 pr-4 uppercase text-right">
-                            02 // Expertise
-                        </div>
-                    </div>
-
                     <div className="text-left">
-                        <h2 className="text-4xl md:text-6xl font-inter font-extrabold text-white leading-tight tracking-tighter mb-8">
-                            what I <span className="text-[#FF6A00]">work_</span>with.
+                        <h2 className="text-4xl md:text-6xl font-inter font-extrabold text-[#1A1A1A] leading-tight tracking-tighter mb-8">
+                            Skills<span className="text-[#FF6A00]">.</span>
                         </h2>
                         <div className="flex justify-start">
                             <div className="w-16 h-1.5 bg-[#FF6A00] mb-8" />
                         </div>
-                        <p className="flex justify-start text-gray-400 text-lg font-inter max-w-2xl ">
-                            A comprehensive toolkit for building scalable, high-performance applications.
-                        </p>
+                        <ScrollRevealText
+                            text="A comprehensive toolkit for building scalable, high-performance applications."
+                            className="text-gray-500 text-lg font-inter max-w-2xl"
+                        />
                     </div>
                 </motion.div>
 
@@ -85,8 +81,9 @@ export default function Skills() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: catIndex * 0.1 }}
+                            className="bg-white p-8 rounded-2xl border border-[#E5E5E5] shadow-sm hover:shadow-md transition-shadow duration-300"
                         >
-                            <h3 className="text-xl font-bold text-white mb-8 border-l-4 border-[#FF6A00] pl-4 font-inter">
+                            <h3 className="text-xl font-bold text-[#1A1A1A] mb-8 border-l-4 border-[#FF6A00] pl-4 font-inter">
                                 {category.title}
                             </h3>
 
@@ -94,12 +91,12 @@ export default function Skills() {
                                 {category.skills.map((skill, index) => (
                                     <Magnetic key={index}>
                                         <motion.div
-                                            whileHover={{ scale: 1.1, backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+                                            whileHover={{ scale: 1.05 }}
                                             whileTap={{ scale: 0.95 }}
-                                            className="flex items-center gap-3 bg-white/5 text-gray-300 px-5 py-3 rounded-full border border-white/5 cursor-pointer transition-colors duration-300 group"
+                                            className="flex items-center gap-3 bg-[#F5F5F5] text-gray-700 px-5 py-3 rounded-full border border-transparent hover:border-[#FF6A00]/30 hover:bg-white hover:shadow-sm cursor-pointer transition-all duration-300 group"
                                         >
-                                            <i className={`${skill.icon} text-xl group-hover:text-[#E65C00] transition-colors duration-300`}></i>
-                                            <span className="font-medium text-sm font-inter group-hover:text-white transition-colors duration-300">{skill.name}</span>
+                                            <i className={`${skill.icon} text-xl group-hover:text-[#FF6A00] transition-colors duration-300`}></i>
+                                            <span className="font-medium text-sm font-inter group-hover:text-[#1A1A1A] transition-colors duration-300">{skill.name}</span>
                                         </motion.div>
                                     </Magnetic>
                                 ))}
