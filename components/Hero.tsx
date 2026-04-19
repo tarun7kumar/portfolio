@@ -26,17 +26,17 @@ export default function Hero() {
             <div className="relative z-10 max-w-7xl mx-auto h-screen flex items-center px-8 md:px-16">
                 <div className="max-w-4xl relative z-10 w-full">
                     <motion.div style={{ filter: blurFilter, opacity: opacityFade }}>
-                        <p className="text-[#F4EBD9] mb-4 text-sm tracking-wide font-semibold">
+                        <p className="font-inter text-lg font-light tracking-[0.08em] text-[#F4EBD9] mb-3 ml-1 md:ml-2">
                             Hi, I'm
                         </p>
                     </motion.div>
 
-                    <h1 className="text-7xl md:text-[7rem] font-extrabold text-[#F4EBD9] tracking-[0.02em] uppercase font-sora leading-[1.05] mb-6 whitespace-nowrap">
+                    <h1 className="font-inter text-7xl md:text-[7rem] font-extrabold text-[#F4EBD9] tracking-[0.02em] uppercase leading-[1.05] mb-0 whitespace-nowrap">
                         TARUN KUMAR<span className="text-[#FF5733]">.</span>
                     </h1>
 
                     <motion.div style={{ filter: blurFilter, opacity: opacityFade }}>
-                        <p className="text-xl md:text-2xl text-[#FFFFFF] leading-relaxed font-inter max-w-2xl">
+                        <p className="font-inter text-lg md:text-xl font-light text-[#FFFFFF] mt-5 leading-relaxed max-w-2xl">
                             Exploring systems, solving problems, building with intent.
                         </p>
 
