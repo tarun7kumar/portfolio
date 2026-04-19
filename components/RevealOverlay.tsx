@@ -27,7 +27,7 @@ const RevealOverlay = () => {
                         ease: [0.645, 0.045, 0.355, 1], // easeInOut approximation
                         delay: i * 0.06,
                     }}
-                    className="h-full bg-[#0F172A]"
+                    className="h-full bg-[#000000]"
                     style={{ width: '12.5%' }}
                 />
             ))}

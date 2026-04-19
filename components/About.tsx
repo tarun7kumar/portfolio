@@ -23,7 +23,7 @@ export default function About() {
                 {/* Main Card Container */}
                 <motion.div 
                     style={{ scale, opacity, rotateX, y, transformStyle: "preserve-3d" }}
-                    className="bg-white border border-[#E5E5E5] rounded-[2.5rem] p-8 md:p-14 lg:p-20 relative overflow-hidden shadow-sm"
+                    className="bg-white border border-[#FFFFFF]/40 rounded-[2.5rem] p-8 md:p-14 lg:p-20 relative overflow-hidden shadow-sm"
                 >
 
                     {/* Background Decorative Dashed Lines */}
@@ -46,19 +46,15 @@ export default function About() {
                                 transition={{ duration: 0.6 }}
                             >
                                 {/* Flush About me pill */}
-                                <div className="bg-[#1A1A1A] text-white font-bold tracking-tight font-inter text-4xl md:text-5xl lg:text-6xl px-8 md:px-12 py-5 lg:py-6 rounded-r-[3rem] inline-block mb-12 -ml-8 md:-ml-14 lg:-ml-20">
-                                    About me<span className="text-[#FF6A00]">.</span>
+                                <div className="bg-[#000000] text-[#F4EBD9] font-bold tracking-tight font-inter text-4xl md:text-5xl lg:text-6xl px-8 md:px-12 py-5 lg:py-6 rounded-r-[3rem] inline-block mb-12 -ml-8 md:-ml-14 lg:-ml-20">
+                                    About me<span className="text-[#FF5733]">.</span>
                                 </div>
 
                                 {/* Text Paragraph */}
                                 <div className="space-y-6">
                                     <ScrollRevealText
-                                        text="I enjoy working through problems that don't have obvious answers. Most of my time goes into figuring things out whether it's understanding how something works under the hood or building it from scratch until it feels right."
-                                        className="text-gray-500 font-inter text-base md:text-lg leading-relaxed max-w-xl"
-                                    />
-                                    <ScrollRevealText
-                                        text="I'm drawn to systems, logic, and clean structure, but I also care about how things look and feel when someone actually uses them. Lately, I've been focusing on improving my problem-solving skills and building projects that reflect that process."
-                                        className="text-gray-500 font-inter text-base md:text-lg leading-relaxed max-w-xl"
+                                        text="I enjoy working through problems that don't have obvious answers. Most of my time goes into figuring things out whether it's understanding how something works under the hood or building it from scratch until it feels right. I'm drawn to systems, logic, and clean structure, but I also care about how things look and feel when someone actually uses them. Lately, I've been focusing on improving my problem-solving skills and building projects that reflect that process."
+                                        className="text-[#000000]/70 font-inter text-base md:text-lg leading-relaxed max-w-xl"
                                     />
                                 </div>
                             </motion.div>
@@ -75,13 +71,13 @@ export default function About() {
                                 className="relative w-full max-w-sm lg:max-w-md aspect-[3/4]"
                             >
                                 {/* Image Pill Shape */}
-                                <div className="w-full h-full rounded-t-[10rem] rounded-b-[10rem] overflow-hidden border border-[#E5E5E5] bg-gray-50 relative group isolate">
+                                <div className="w-full h-full rounded-t-[10rem] rounded-b-[10rem] overflow-hidden border border-[#FFFFFF]/40 bg-[#F4EBD9] relative group isolate">
                                     <img
-                                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"
+                                        src="/profile.jpg"
                                         alt="Tarun Kumar"
                                         className="object-cover w-full h-full grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out scale-100 group-hover:scale-105"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-gray-200/60 via-transparent to-transparent pointer-events-none mix-blend-overlay z-10" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#FFFFFF]/30 via-transparent to-transparent pointer-events-none mix-blend-overlay z-10" />
                                 </div>
                             </motion.div>
                         </div>

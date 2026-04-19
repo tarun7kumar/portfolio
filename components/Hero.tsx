@@ -26,26 +26,26 @@ export default function Hero() {
             <div className="relative z-10 max-w-7xl mx-auto h-screen flex items-center px-8 md:px-16">
                 <div className="max-w-4xl relative z-10 w-full">
                     <motion.div style={{ filter: blurFilter, opacity: opacityFade }}>
-                        <p className="text-[#F3F4F6] mb-4 text-sm tracking-wide font-semibold">
+                        <p className="text-[#F4EBD9] mb-4 text-sm tracking-wide font-semibold">
                             Hi, I'm
                         </p>
                     </motion.div>
 
-                    <h1 className="text-7xl md:text-[7rem] font-extrabold text-[#F3F4F6] tracking-[0.02em] uppercase font-sora leading-[1.05] mb-6 whitespace-nowrap">
-                        TARUN KUMAR<span className="text-[#F3F4F6]">.</span>
+                    <h1 className="text-7xl md:text-[7rem] font-extrabold text-[#F4EBD9] tracking-[0.02em] uppercase font-sora leading-[1.05] mb-6 whitespace-nowrap">
+                        TARUN KUMAR<span className="text-[#FF5733]">.</span>
                     </h1>
 
                     <motion.div style={{ filter: blurFilter, opacity: opacityFade }}>
-                        <p className="text-xl md:text-2xl text-[#9CA3AF] leading-relaxed font-inter max-w-2xl">
+                        <p className="text-xl md:text-2xl text-[#FFFFFF] leading-relaxed font-inter max-w-2xl">
                             Exploring systems, solving problems, building with intent.
                         </p>
 
                         <div className="mt-12 flex flex-wrap gap-5">
-                        <button className="bg-white text-black px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:bg-[#F3F4F6] hover:shadow-[0_4px_14px_0_rgba(255,255,255,0.15)]">
+                        <button className="bg-[#FF5733] text-white px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:bg-[#E64C2B] hover:shadow-[0_4px_14px_0_rgba(255,87,51,0.3)]">
                             View Projects
                         </button>
 
-                        <button className="border-2 border-[#1A1A1A] bg-[#111111] text-[#F3F4F6] px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:bg-[#1A1A1A]">
+                        <button className="border-2 border-[#FFFFFF]/40 bg-[#1A1A1A] text-[#F4EBD9] px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:bg-[#555555] hover:border-[#FFFFFF]">
                             Resume
                         </button>
                     </div>

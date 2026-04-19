@@ -8,36 +8,53 @@ const skillCategories = [
     {
         title: "Programming Languages",
         skills: [
+            { name: "C", icon: "devicon-c-plain" },
             { name: "C++", icon: "devicon-cplusplus-plain" },
-            { name: "Java", icon: "devicon-java-plain" },
-            { name: "JavaScript", icon: "devicon-javascript-plain" },
             { name: "Python", icon: "devicon-python-plain" },
-        ]
-    },
-    {
-        title: "Web Development",
-        skills: [
+            { name: "Java", icon: "devicon-java-plain" },
             { name: "HTML", icon: "devicon-html5-plain" },
             { name: "CSS", icon: "devicon-css3-plain" },
             { name: "JavaScript", icon: "devicon-javascript-plain" },
-            { name: "React.js", icon: "devicon-react-original" },
-            { name: "Node.js", icon: "devicon-nodejs-plain" },
-            { name: "Express.js", icon: "devicon-express-original" },
         ]
     },
     {
-        title: "Databases & Hosting",
+        title: "Frameworks & Libraries",
         skills: [
-            { name: "MongoDB", icon: "devicon-mongodb-plain" },
-            { name: "Vercel", icon: "devicon-vercel-original" },
-        ]
-    },
-    {
-        title: "Tools & Technologies",
-        skills: [
+            { name: "scikit-learn", icon: "devicon-python-plain" },
+            { name: "Pandas", icon: "devicon-pandas-plain" },
+            { name: "NumPy", icon: "devicon-numpy-plain" },
+            { name: "Matplotlib", icon: "devicon-python-plain" },
             { name: "Git", icon: "devicon-git-plain" },
-            { name: "GitHub", icon: "devicon-github-original" },
-            { name: "VS Code", icon: "devicon-vscode-plain" },
+            { name: "Node.js", icon: "devicon-nodejs-plain" },
+            { name: "React.js", icon: "devicon-react-original" },
+            { name: "Tailwind CSS", icon: "devicon-tailwindcss-plain" },
+        ]
+    },
+    {
+        title: "Machine Learning",
+        skills: [
+            { name: "Classification", icon: "devicon-python-plain" },
+            { name: "Feature Scaling", icon: "devicon-code-plain" },
+            { name: "EDA", icon: "devicon-pandas-plain" },
+            { name: "Outlier Analysis", icon: "devicon-python-plain" },
+        ]
+    },
+    {
+        title: "Core Concepts",
+        skills: [
+            { name: "DSA", icon: "devicon-cplusplus-plain" },
+            { name: "Computer Networks", icon: "devicon-linux-plain" },
+            { name: "Probability", icon: "devicon-code-plain" },
+        ]
+    },
+    {
+        title: "Engineering Tools",
+        skills: [
+            { name: "Multisim", icon: "devicon-linux-plain" },
+            { name: "Proteus", icon: "devicon-arduino-plain" },
+            { name: "ModelSim", icon: "devicon-code-plain" },
+            { name: "Quartus", icon: "devicon-code-plain" },
+            { name: "Verilog", icon: "devicon-code-plain" },
         ]
     }
 ];
@@ -47,7 +64,7 @@ export default function Skills() {
         <section id="skills" className="py-32 relative overflow-hidden bg-transparent">
             {/* Background "SKILLS" Text */}
             <div className="absolute top-150 right-10 -translate-y-1/2 select-none pointer-events-none hidden lg:block z-0">
-                <h2 className="text-[12rem] font-black text-gray-100 tracking-tighter leading-none font-display -rotate-90 whitespace-nowrap">
+                <h2 className="text-[12rem] font-black text-[#FFFFFF]/15 tracking-tighter leading-none font-display -rotate-90 whitespace-nowrap">
                     SKILLS
                 </h2>
             </div>
@@ -60,15 +77,15 @@ export default function Skills() {
                     className="mb-20"
                 >
                     <div className="text-left">
-                        <h2 className="text-4xl md:text-6xl font-inter font-extrabold text-[#1A1A1A] leading-tight tracking-tighter mb-8">
-                            Skills<span className="text-[#FF6A00]">.</span>
+                        <h2 className="text-4xl md:text-6xl font-inter font-extrabold text-[#000000] leading-tight tracking-tighter mb-8">
+                            Skills<span className="text-[#FF5733]">.</span>
                         </h2>
                         <div className="flex justify-start">
-                            <div className="w-16 h-1.5 bg-[#FF6A00] mb-8" />
+                            <div className="w-16 h-1.5 bg-[#FF5733] mb-8" />
                         </div>
                         <ScrollRevealText
                             text="A comprehensive toolkit for building scalable, high-performance applications."
-                            className="text-gray-500 text-lg font-inter max-w-2xl"
+                            className="text-[#000000]/60 text-lg font-inter max-w-2xl"
                         />
                     </div>
                 </motion.div>
@@ -81,9 +98,9 @@ export default function Skills() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: catIndex * 0.1 }}
-                            className="bg-white p-8 rounded-2xl border border-[#E5E5E5] shadow-sm hover:shadow-md transition-shadow duration-300"
+                            className="bg-white p-8 rounded-2xl border border-[#FFFFFF]/30 shadow-sm hover:shadow-md transition-shadow duration-300"
                         >
-                            <h3 className="text-xl font-bold text-[#1A1A1A] mb-8 border-l-4 border-[#FF6A00] pl-4 font-inter">
+                            <h3 className="text-xl font-bold text-[#000000] mb-8 border-l-4 border-[#FF5733] pl-4 font-inter">
                                 {category.title}
                             </h3>
 
@@ -93,10 +110,10 @@ export default function Skills() {
                                         <motion.div
                                             whileHover={{ scale: 1.05 }}
                                             whileTap={{ scale: 0.95 }}
-                                            className="flex items-center gap-3 bg-[#F5F5F5] text-gray-700 px-5 py-3 rounded-full border border-transparent hover:border-[#FF6A00]/30 hover:bg-white hover:shadow-sm cursor-pointer transition-all duration-300 group"
+                                            className="flex items-center gap-3 bg-[#F4EBD9] text-[#000000] px-5 py-3 rounded-full border border-transparent hover:border-[#FF5733]/30 hover:bg-white hover:shadow-sm cursor-pointer transition-all duration-300 group"
                                         >
-                                            <i className={`${skill.icon} text-xl group-hover:text-[#FF6A00] transition-colors duration-300`}></i>
-                                            <span className="font-medium text-sm font-inter group-hover:text-[#1A1A1A] transition-colors duration-300">{skill.name}</span>
+                                            <i className={`${skill.icon} text-xl group-hover:text-[#FF5733] transition-colors duration-300`}></i>
+                                            <span className="font-medium text-sm font-inter group-hover:text-[#000000] transition-colors duration-300">{skill.name}</span>
                                         </motion.div>
                                     </Magnetic>
                                 ))}

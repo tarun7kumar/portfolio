@@ -73,7 +73,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <body
-        className={`${jakarta.variable} ${lexend.variable} ${cormorant.variable} ${spaceGrotesk.variable} ${montserrat.variable} ${poppins.variable} ${inter.variable} ${dmSans.variable} antialiased text-white bg-[#000000]`}
+        className={`${jakarta.variable} ${lexend.variable} ${cormorant.variable} ${spaceGrotesk.variable} ${montserrat.variable} ${poppins.variable} ${inter.variable} ${dmSans.variable} antialiased text-[#F4EBD9] bg-[#000000]`}
       >
         <RevealOverlay />
         <ScrollProgress className="top-[80px]" />

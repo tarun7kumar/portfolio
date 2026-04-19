@@ -18,15 +18,15 @@ export default function Contact() {
                     className="flex flex-col items-center"
                 >
                     {/* Folder Tab */}
-                    <div className="w-32 md:w-48 h-6 md:h-8 bg-[#0A0A0A] rounded-t-xl relative z-20 translate-y-1"></div>
+                    <div className="w-32 md:w-48 h-6 md:h-8 bg-[#111111] rounded-t-xl relative z-20 translate-y-1"></div>
                     
                     {/* Folder Body */}
-                    <div className="w-full bg-[#0A0A0A] rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl relative z-10">
+                    <div className="w-full bg-[#111111] rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl relative z-10">
                         
                         {/* Header */}
                         <div className="text-center mb-16">
-                            <h4 className="text-[#FF6A00] font-bold text-sm tracking-widest uppercase mb-4 font-inter">Let's Get Connected</h4>
-                            <h2 className="text-3xl md:text-5xl font-extrabold text-white font-inter tracking-tighter">
+                            <h4 className="text-[#FF5733] font-bold text-sm tracking-widest uppercase mb-4 font-inter">Let's Get Connected</h4>
+                            <h2 className="text-3xl md:text-5xl font-extrabold text-[#F4EBD9] font-inter tracking-tighter">
                                 Let's Build Something Together
                             </h2>
                         </div>
@@ -37,14 +37,14 @@ export default function Contact() {
                             {/* Left Side: Contact Info */}
                             <div className="flex flex-col justify-center space-y-12 lg:pr-12">
                                 <div>
-                                    <h3 className="text-2xl font-bold text-white mb-4 font-inter">Let's Talk</h3>
-                                    <p className="text-gray-400 font-inter mb-6 leading-relaxed">
+                                    <h3 className="text-2xl font-bold text-[#F4EBD9] mb-4 font-inter">Let's Talk</h3>
+                                    <p className="text-[#FFFFFF]/80 font-inter mb-6 leading-relaxed">
                                         Whether you have a question, a project in mind, or just want to say hi, I'll try my best to get back to you!
                                     </p>
                                     <Magnetic>
                                         <a
                                             href="mailto:tkofficial2004@gmail.com"
-                                            className="inline-block text-xl md:text-2xl font-bold text-[#FF6A00] hover:text-[#E65C00] transition-colors border-b border-[#FF6A00]/30 hover:border-[#E65C00] pb-1 font-inter"
+                                            className="inline-block text-xl md:text-2xl font-bold text-[#FF5733] hover:text-[#E64C2B] transition-colors border-b border-[#FF5733]/30 hover:border-[#E64C2B] pb-1 font-inter"
                                         >
                                             tkofficial2004@gmail.com
                                         </a>
@@ -52,7 +52,7 @@ export default function Contact() {
                                 </div>
 
                                 <div>
-                                    <h3 className="text-sm uppercase tracking-widest text-gray-500 font-semibold mb-6 font-inter">Connect</h3>
+                                    <h3 className="text-sm uppercase tracking-widest text-[#FFFFFF]/60 font-semibold mb-6 font-inter">Connect</h3>
                                     <div className="flex justify-start">
                                         <FloatingDock
                                             items={[
@@ -67,46 +67,46 @@ export default function Contact() {
                             </div>
 
                             {/* Right Side: Form */}
-                            <div className="bg-transparent border border-white/10 rounded-2xl p-6 md:p-8">
+                            <div className="bg-transparent border border-[#FFFFFF]/20 rounded-2xl p-6 md:p-8">
                                 <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                                     <div>
-                                        <label className="block text-white text-sm font-bold mb-2 font-inter">Your Name</label>
+                                        <label className="block text-[#F4EBD9] text-sm font-bold mb-2 font-inter">Your Name</label>
                                         <input 
                                             type="text" 
                                             placeholder="Who am I speaking with?" 
-                                            className="w-full bg-[#F5F5F5] text-[#1A1A1A] placeholder-gray-400 rounded-lg px-4 py-3 font-inter outline-none focus:ring-2 focus:ring-[#FF6A00] transition-all"
+                                            className="w-full bg-[#F4EBD9] text-[#000000] placeholder-[#000000]/40 rounded-lg px-4 py-3 font-inter outline-none focus:ring-2 focus:ring-[#FF5733] transition-all"
                                         />
                                     </div>
                                     
                                     <div>
-                                        <label className="block text-white text-sm font-bold mb-2 font-inter">Email</label>
+                                        <label className="block text-[#F4EBD9] text-sm font-bold mb-2 font-inter">Email</label>
                                         <input 
                                             type="email" 
                                             placeholder="Where should I send the magic?" 
-                                            className="w-full bg-[#F5F5F5] text-[#1A1A1A] placeholder-gray-400 rounded-lg px-4 py-3 font-inter outline-none focus:ring-2 focus:ring-[#FF6A00] transition-all"
+                                            className="w-full bg-[#F4EBD9] text-[#000000] placeholder-[#000000]/40 rounded-lg px-4 py-3 font-inter outline-none focus:ring-2 focus:ring-[#FF5733] transition-all"
                                         />
                                     </div>
 
                                     <div>
-                                        <label className="block text-white text-sm font-bold mb-2 font-inter">Company Name</label>
+                                        <label className="block text-[#F4EBD9] text-sm font-bold mb-2 font-inter">Company Name</label>
                                         <input 
                                             type="text" 
                                             placeholder="Organisation Name" 
-                                            className="w-full bg-[#F5F5F5] text-[#1A1A1A] placeholder-gray-400 rounded-lg px-4 py-3 font-inter outline-none focus:ring-2 focus:ring-[#FF6A00] transition-all"
+                                            className="w-full bg-[#F4EBD9] text-[#000000] placeholder-[#000000]/40 rounded-lg px-4 py-3 font-inter outline-none focus:ring-2 focus:ring-[#FF5733] transition-all"
                                         />
                                     </div>
 
                                     <div>
-                                        <label className="block text-white text-sm font-bold mb-2 font-inter">Your Message</label>
+                                        <label className="block text-[#F4EBD9] text-sm font-bold mb-2 font-inter">Your Message</label>
                                         <textarea 
                                             placeholder="Tell me everything. I love context." 
-                                            className="w-full bg-[#F5F5F5] text-[#1A1A1A] placeholder-gray-400 rounded-lg px-4 py-3 font-inter outline-none focus:ring-2 focus:ring-[#FF6A00] transition-all h-32 resize-none"
+                                            className="w-full bg-[#F4EBD9] text-[#000000] placeholder-[#000000]/40 rounded-lg px-4 py-3 font-inter outline-none focus:ring-2 focus:ring-[#FF5733] transition-all h-32 resize-none"
                                         ></textarea>
                                     </div>
 
                                     <button 
                                         type="submit" 
-                                        className="w-full bg-[#FF6A00] text-white font-bold py-4 rounded-lg hover:bg-[#E65C00] transition-all font-inter"
+                                        className="w-full bg-[#FF5733] text-white font-bold py-4 rounded-lg hover:bg-[#E64C2B] transition-all font-inter"
                                     >
                                         Submit
                                     </button>
@@ -115,7 +115,7 @@ export default function Contact() {
 
                         </div>
                         
-                        <footer className="mt-20 pt-8 border-t border-white/5 text-center text-gray-600 text-sm uppercase tracking-[0.2em] font-medium font-inter">
+                        <footer className="mt-20 pt-8 border-t border-[#FFFFFF]/10 text-center text-[#FFFFFF]/40 text-sm uppercase tracking-[0.2em] font-medium font-inter">
                             <p>© {new Date().getFullYear()} Tarun Kumar. Crafted with Heritage & Tech.</p>
                         </footer>
                     </div>

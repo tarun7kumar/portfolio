@@ -8,7 +8,7 @@ import Silk from "@/components/Silk";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#F5F5F5]">
+    <main className="min-h-screen bg-[#F4EBD9]">
       <Navbar />
       
       {/* Wrapper for Hero sharing the Silk background */}
@@ -18,7 +18,7 @@ export default function Home() {
             <Silk
                 speed={1.5}
                 scale={1}
-                color="#3A1D1D"
+                color="#3A2A1D"
                 noiseIntensity={0.8}
                 rotation={0}
             />
