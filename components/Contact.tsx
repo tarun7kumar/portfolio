@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import Link from "next/link";
 import { Magnetic } from "./ui/ios-pointer";
 import { FloatingDock } from "./ui/floating-dock";
@@ -56,9 +56,8 @@ export default function Contact() {
                                     <div className="flex justify-start">
                                         <FloatingDock
                                             items={[
-                                                { title: "GitHub", icon: <Github className="w-full h-full" />, href: "https://github.com" },
-                                                { title: "LinkedIn", icon: <Linkedin className="w-full h-full" />, href: "https://linkedin.com" },
-                                                { title: "Twitter", icon: <Twitter className="w-full h-full" />, href: "https://twitter.com" },
+                                                { title: "GitHub", icon: <Github className="w-full h-full" />, href: "https://github.com/tarun7kumar" },
+                                                { title: "LinkedIn", icon: <Linkedin className="w-full h-full" />, href: "https://www.linkedin.com/in/tarun7kumar/" },
                                             ]}
                                             desktopClassName="bg-transparent border-none px-0"
                                         />

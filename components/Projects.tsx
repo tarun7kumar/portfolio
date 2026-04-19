@@ -23,7 +23,7 @@ const projects = [
         date: "May 2025 – Jun 2025",
         description: "Developed a lightweight preprocessing and feature extraction pipeline to classify network traffic types (HTTP, DNS, FTP) using packet-level features across multiple protocols.",
         tech: ["Python", "scikit-learn", "Networking"],
-        github: "#",
+        github: "https://github.com/tarun7kumar/network-traffic-classification",
         highlights: [
             "Benchmarked 2 models (Random Forest, CNN) to compare efficiency and accuracy",
             "Achieved optimal classification performance through cross-validated evaluation",
@@ -35,7 +35,7 @@ const projects = [
         date: "Feb 2025 – Mar 2025",
         description: "Developed a Trie-based autocomplete engine processing a 37K+ word dictionary, enabling real-time prefix search with sub-millisecond query retrieval.",
         tech: ["C++", "Data Structures", "Algorithms"],
-        github: "#",
+        github: "https://github.com/tarun7kumar/trie-autosuggestion",
         highlights: [
             "Implemented top-K suggestion ranking at each Trie node for relevant completions",
             "Optimized traversal logic to surface results while minimizing redundant visits",
@@ -47,8 +47,8 @@ const projects = [
         date: "2024 – Present",
         description: "A modern, high-performance developer portfolio designed to establish a strong personal brand. Built with a focus on clean aesthetics, smooth interactions, and type-safe code.",
         tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-        link: "#",
-        github: "https://github.com/tarun7kumar/portfolio-website",
+        link: "https://tarunk-portfolio.vercel.app/",
+        github: "https://github.com/tarun7kumar/portfolio",
         highlights: [
             "Custom design system with Tailwind CSS",
             "Type-safe implementation using TypeScript",
@@ -101,7 +101,7 @@ export default function Projects() {
                                                 {project.title}
                                             </h3>
                                             {(project as any).date && (
-                                                <span className="text-sm font-mono text-[#FFFFFF] tracking-widest uppercase">
+                                                <span className="text-sm font-inter font-semibold text-[#FF5733] tracking-wider uppercase">
                                                     {(project as any).date}
                                                 </span>
                                             )}
@@ -124,7 +124,7 @@ export default function Projects() {
                                     )}
 
                                     {/* Tech Stack */}
-                                    <div className="flex flex-wrap gap-x-3 gap-y-2 text-sm font-mono text-[#F4EBD9]/70 uppercase tracking-wider">
+                                    <div className="flex flex-wrap gap-x-3 gap-y-2 text-sm font-inter text-[#F4EBD9]/70 uppercase tracking-wider">
                                         {project.tech.map((tech) => (
                                             <span key={tech} className="bg-[#F4EBD9]/5 border border-[#FFFFFF]/15 px-3 py-1 rounded-full">{tech}</span>
                                         ))}
