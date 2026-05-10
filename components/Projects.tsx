@@ -59,7 +59,7 @@ const projects = [
 
 export default function Projects() {
     return (
-        <section id="projects" className="py-32 relative overflow-hidden bg-[#000000]">
+        <section id="projects" className="py-16 sm:py-24 md:py-32 relative overflow-hidden bg-[#000000]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
                 {/* Section Header */}
@@ -67,7 +67,7 @@ export default function Projects() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="mb-24 text-left"
+                    className="mb-12 sm:mb-16 md:mb-24 text-left"
                 >
                     <h2 className="text-4xl md:text-6xl font-extrabold text-[#F4EBD9] mb-8 font-inter leading-tight tracking-tighter">
                         Things I've <span className="text-[#FF5733]">Built.</span>
@@ -89,7 +89,7 @@ export default function Projects() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="group bg-[#111111] border border-[#FFFFFF]/15 rounded-2xl p-8 md:p-12 hover:border-[#FFFFFF]/30 hover:bg-[#1A1A1A] transition-all duration-300 relative overflow-hidden"
+                            className="group bg-[#111111] border border-[#FFFFFF]/15 rounded-2xl p-5 sm:p-8 md:p-12 hover:border-[#FFFFFF]/30 hover:bg-[#1A1A1A] transition-all duration-300 relative overflow-hidden"
                         >
                             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 md:gap-12 relative z-10">
 
@@ -97,7 +97,7 @@ export default function Projects() {
                                 <div className="flex-1 space-y-6">
                                     <div className="space-y-4">
                                         <div className="flex flex-col gap-1">
-                                            <h3 className="text-3xl font-bold text-[#F4EBD9] font-inter tracking-tight group-hover:text-[#FF5733] transition-colors duration-300">
+                                            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#F4EBD9] font-inter tracking-tight group-hover:text-[#FF5733] transition-colors duration-300">
                                                 {project.title}
                                             </h3>
                                             {(project as any).date && (
@@ -106,7 +106,7 @@ export default function Projects() {
                                                 </span>
                                             )}
                                         </div>
-                                        <p className="text-[#FFFFFF]/80 text-lg leading-relaxed font-inter max-w-2xl">
+                                        <p className="text-[#FFFFFF]/80 text-sm sm:text-base md:text-lg leading-relaxed font-inter max-w-2xl">
                                             {project.description}
                                         </p>
                                     </div>
@@ -131,12 +131,12 @@ export default function Projects() {
                                     </div>
 
                                     {/* Links */}
-                                    <div className="flex items-center gap-6 pt-6">
+                                    <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-4 sm:pt-6">
                                         {project.link && (
                                             <Magnetic>
                                                 <Link
                                                     href={project.link}
-                                                    className="inline-flex items-center justify-center gap-2 bg-[#FF5733] text-white px-6 py-3 rounded-full font-bold font-inter hover:bg-[#E64C2B] hover:-translate-y-0.5 transition-all"
+                                                    className="inline-flex items-center justify-center gap-2 bg-[#FF5733] text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-bold text-sm sm:text-base font-inter hover:bg-[#E64C2B] hover:-translate-y-0.5 transition-all"
                                                 >
                                                     View Project <ArrowUpRight size={18} />
                                                 </Link>

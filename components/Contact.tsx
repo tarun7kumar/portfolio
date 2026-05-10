@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Github, Linkedin } from "lucide-react";
 import Link from "next/link";
@@ -7,10 +8,31 @@ import { Magnetic } from "./ui/ios-pointer";
 import { FloatingDock } from "./ui/floating-dock";
 
 export default function Contact() {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [subject, setSubject] = useState("");
+    const [message, setMessage] = useState("");
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+
+        if (!name.trim() || !email.trim() || !message.trim()) return;
+
+        const mailSubject = encodeURIComponent(subject || `Message from ${name}`);
+        const mailBody = encodeURIComponent(
+            `Name: ${name}\nEmail: ${email}\n\n${message}`
+        );
+
+        window.open(
+            `mailto:tkofficial2004@gmail.com?subject=${mailSubject}&body=${mailBody}`,
+            "_self"
+        );
+    };
+
     return (
-        <section id="contact" className="py-32 relative overflow-hidden bg-transparent">
+        <section id="contact" className="py-16 sm:py-24 md:py-32 relative overflow-hidden bg-transparent">
             
-            <div className="max-w-5xl mx-auto px-4 relative z-10">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -18,15 +40,15 @@ export default function Contact() {
                     className="flex flex-col items-center"
                 >
                     {/* Folder Tab */}
-                    <div className="w-32 md:w-48 h-6 md:h-8 bg-[#111111] rounded-t-xl relative z-20 translate-y-1"></div>
+                    <div className="w-24 sm:w-32 md:w-48 h-5 sm:h-6 md:h-8 bg-[#111111] rounded-t-xl relative z-20 translate-y-1"></div>
                     
                     {/* Folder Body */}
-                    <div className="w-full bg-[#111111] rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl relative z-10">
+                    <div className="w-full bg-[#111111] rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-12 lg:p-16 shadow-2xl relative z-10">
                         
                         {/* Header */}
-                        <div className="text-center mb-16">
+                        <div className="text-center mb-8 sm:mb-12 md:mb-16">
                             <h4 className="text-[#FF5733] font-bold text-sm tracking-widest uppercase mb-4 font-inter">Let's Get Connected</h4>
-                            <h2 className="text-3xl md:text-5xl font-extrabold text-[#F4EBD9] font-inter tracking-tighter">
+                            <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-[#F4EBD9] font-inter tracking-tighter">
                                 Let's Build Something Together
                             </h2>
                         </div>
@@ -44,7 +66,7 @@ export default function Contact() {
                                     <Magnetic>
                                         <a
                                             href="mailto:tkofficial2004@gmail.com"
-                                            className="inline-block text-xl md:text-2xl font-bold text-[#FF5733] hover:text-[#E64C2B] transition-colors border-b border-[#FF5733]/30 hover:border-[#E64C2B] pb-1 font-inter"
+                                            className="inline-block text-base sm:text-xl md:text-2xl font-bold text-[#FF5733] hover:text-[#E64C2B] transition-colors border-b border-[#FF5733]/30 hover:border-[#E64C2B] pb-1 font-inter break-all sm:break-normal"
                                         >
                                             tkofficial2004@gmail.com
                                         </a>
@@ -66,12 +88,15 @@ export default function Contact() {
                             </div>
 
                             {/* Right Side: Form */}
-                            <div className="bg-transparent border border-[#FFFFFF]/20 rounded-2xl p-6 md:p-8">
-                                <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                            <div className="bg-transparent border border-[#FFFFFF]/20 rounded-2xl p-4 sm:p-6 md:p-8">
+                                <form className="space-y-6" onSubmit={handleSubmit}>
                                     <div>
                                         <label className="block text-[#F4EBD9] text-sm font-bold mb-2 font-inter">Your Name</label>
                                         <input 
-                                            type="text" 
+                                            type="text"
+                                            required
+                                            value={name}
+                                            onChange={(e) => setName(e.target.value)}
                                             placeholder="Who am I speaking with?" 
                                             className="w-full bg-[#F4EBD9] text-[#000000] placeholder-[#000000]/40 rounded-lg px-4 py-3 font-inter outline-none focus:ring-2 focus:ring-[#FF5733] transition-all"
                                         />
@@ -80,24 +105,32 @@ export default function Contact() {
                                     <div>
                                         <label className="block text-[#F4EBD9] text-sm font-bold mb-2 font-inter">Email</label>
                                         <input 
-                                            type="email" 
+                                            type="email"
+                                            required
+                                            value={email}
+                                            onChange={(e) => setEmail(e.target.value)}
                                             placeholder="Where should I send the magic?" 
                                             className="w-full bg-[#F4EBD9] text-[#000000] placeholder-[#000000]/40 rounded-lg px-4 py-3 font-inter outline-none focus:ring-2 focus:ring-[#FF5733] transition-all"
                                         />
                                     </div>
 
                                     <div>
-                                        <label className="block text-[#F4EBD9] text-sm font-bold mb-2 font-inter">Company Name</label>
+                                        <label className="block text-[#F4EBD9] text-sm font-bold mb-2 font-inter">Subject</label>
                                         <input 
-                                            type="text" 
-                                            placeholder="Organisation Name" 
+                                            type="text"
+                                            value={subject}
+                                            onChange={(e) => setSubject(e.target.value)}
+                                            placeholder="What's this about?" 
                                             className="w-full bg-[#F4EBD9] text-[#000000] placeholder-[#000000]/40 rounded-lg px-4 py-3 font-inter outline-none focus:ring-2 focus:ring-[#FF5733] transition-all"
                                         />
                                     </div>
 
                                     <div>
                                         <label className="block text-[#F4EBD9] text-sm font-bold mb-2 font-inter">Your Message</label>
-                                        <textarea 
+                                        <textarea
+                                            required
+                                            value={message}
+                                            onChange={(e) => setMessage(e.target.value)}
                                             placeholder="Tell me everything. I love context." 
                                             className="w-full bg-[#F4EBD9] text-[#000000] placeholder-[#000000]/40 rounded-lg px-4 py-3 font-inter outline-none focus:ring-2 focus:ring-[#FF5733] transition-all h-32 resize-none"
                                         ></textarea>
@@ -107,14 +140,14 @@ export default function Contact() {
                                         type="submit" 
                                         className="w-full bg-[#FF5733] text-white font-bold py-4 rounded-lg hover:bg-[#E64C2B] transition-all font-inter"
                                     >
-                                        Submit
+                                        Send Message
                                     </button>
                                 </form>
                             </div>
 
                         </div>
                         
-                        <footer className="mt-20 pt-8 border-t border-[#FFFFFF]/10 text-center text-[#FFFFFF]/40 text-sm uppercase tracking-[0.2em] font-medium font-inter">
+                        <footer className="mt-12 sm:mt-16 md:mt-20 pt-6 sm:pt-8 border-t border-[#FFFFFF]/10 text-center text-[#FFFFFF]/40 text-xs sm:text-sm uppercase tracking-[0.15em] sm:tracking-[0.2em] font-medium font-inter">
                             <p>© {new Date().getFullYear()} Tarun Kumar. Crafted with Heritage & Tech.</p>
                         </footer>
                     </div>

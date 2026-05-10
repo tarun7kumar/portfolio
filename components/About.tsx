@@ -17,13 +17,13 @@ export default function About() {
     const y = useTransform(scrollYProgress, [0, 1], [150, 0]);
 
     return (
-        <section id="about" ref={containerRef} style={{ perspective: "1200px" }} className="py-24 md:py-32 relative overflow-hidden min-h-screen flex items-center bg-transparent">
-            <div className="max-w-[85rem] mx-auto px-4 md:px-8 relative z-10 w-full">
+        <section id="about" ref={containerRef} style={{ perspective: "1200px" }} className="py-16 sm:py-24 md:py-32 relative overflow-hidden min-h-screen flex items-center bg-transparent">
+            <div className="max-w-[85rem] mx-auto px-4 sm:px-6 md:px-8 relative z-10 w-full">
 
                 {/* Main Card Container */}
                 <motion.div 
                     style={{ scale, opacity, rotateX, y, transformStyle: "preserve-3d" }}
-                    className="bg-white border border-[#FFFFFF]/40 rounded-[2.5rem] p-8 md:p-14 lg:p-20 relative overflow-hidden shadow-sm"
+                    className="bg-white border border-[#FFFFFF]/40 rounded-2xl sm:rounded-[2.5rem] p-5 sm:p-8 md:p-14 lg:p-20 relative overflow-hidden shadow-sm"
                 >
 
                     {/* Background Decorative Dashed Lines */}
@@ -34,7 +34,7 @@ export default function About() {
                         </svg>
                     </div>
 
-                    <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 justify-between items-center lg:items-stretch">
+                    <div className="flex flex-col lg:flex-row gap-10 sm:gap-16 lg:gap-24 justify-between items-center lg:items-stretch">
 
                         {/* Left Column: Content */}
                         <div className="lg:w-[55%] flex flex-col justify-center relative z-10 w-full lg:py-12">
@@ -46,7 +46,7 @@ export default function About() {
                                 transition={{ duration: 0.6 }}
                             >
                                 {/* Flush About me pill */}
-                                <div className="bg-[#000000] text-[#F4EBD9] font-bold tracking-tight font-inter text-4xl md:text-5xl lg:text-6xl px-8 md:px-12 py-5 lg:py-6 rounded-r-[3rem] inline-block mb-12 -ml-8 md:-ml-14 lg:-ml-20">
+                                <div className="bg-[#000000] text-[#F4EBD9] font-bold tracking-tight font-inter text-2xl sm:text-4xl md:text-5xl lg:text-6xl px-5 sm:px-8 md:px-12 py-4 sm:py-5 lg:py-6 rounded-r-[2rem] sm:rounded-r-[3rem] inline-block mb-8 sm:mb-12 -ml-5 sm:-ml-8 md:-ml-14 lg:-ml-20">
                                     About me<span className="text-[#FF5733]">.</span>
                                 </div>
 
@@ -62,13 +62,13 @@ export default function About() {
                         </div>
 
                         {/* Right Column: Image */}
-                        <div className="lg:w-[45%] flex items-center justify-center lg:justify-end relative z-10 w-full mt-12 lg:mt-0">
+                        <div className="lg:w-[45%] flex items-center justify-center lg:justify-end relative z-10 w-full mt-8 sm:mt-12 lg:mt-0">
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.95 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.8 }}
-                                className="relative w-full max-w-sm lg:max-w-md aspect-[3/4]"
+                                className="relative w-full max-w-[280px] sm:max-w-sm lg:max-w-md aspect-[3/4]"
                             >
                                 {/* Image Pill Shape */}
                                 <div className="w-full h-full rounded-t-[10rem] rounded-b-[10rem] overflow-hidden border border-[#FFFFFF]/40 bg-[#F4EBD9] relative group isolate">

@@ -17,7 +17,6 @@
   --primary: #FF5733;
 }
 
-/* ===== BASE ===== */
 html,
 body {
   background: #000000;
@@ -26,6 +25,12 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
   position: relative;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* GLASSMORPHISM UTILITIES */
@@ -64,4 +69,11 @@ body {
 ::selection {
   background: rgba(255, 87, 51, 0.3);
   color: #fff;
+}
+
+/* Mobile scrollbar: thinner */
+@media (max-width: 640px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
 }
